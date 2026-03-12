@@ -11,6 +11,8 @@
     content="Bully Cyber Security helps businesses identify risks, uncover vulnerabilities, and strengthen their security posture."
   />
 
+  <link rel="icon" type="image/png" href="images/bcs-logo.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -100,6 +102,15 @@
       color: #fff;
       font-weight: 800;
       box-shadow: 0 16px 40px rgba(18, 57, 91, 0.25);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .monogram img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .brand-copy strong {
@@ -181,6 +192,14 @@
     .hero > * {
       position: relative;
       z-index: 1;
+    }
+
+    .hero-logo {
+      display: block;
+      width: 110px;
+      max-width: 28vw;
+      margin: 0 auto 1rem;
+      filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.28));
     }
 
     .hero h1 {
@@ -723,7 +742,9 @@
 <body>
   <div class="nav container">
     <a class="brand" href="#top">
-      <div class="monogram">BCS</div>
+      <div class="monogram">
+        <img src="images/bcs-logo.png" alt="BCS logo" />
+      </div>
       <div class="brand-copy">
         <strong>Bully Cyber Security</strong>
         <span>Helping Businesses Find Risks Before Threats Do</span>
@@ -740,6 +761,8 @@
   </div>
 
   <header class="hero" id="top">
+    <img class="hero-logo" src="images/bcs-logo.png" alt="BCS logo" />
+
     <h1>Bully Cyber Security</h1>
 
     <p>
@@ -963,30 +986,6 @@
 
     <section class="block">
       <div class="section-head">
-        <h2>Certifications</h2>
-        <p>Industry-recognized certifications and training that strengthen credibility and trust.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-pad">
-          <ul class="names-list">
-            <li><span>AWS Certified Security – Specialty</span><span class="pill">AWS</span></li>
-            <li><span>Certified Information Systems Auditor (CISA)</span><span class="pill">ISACA</span></li>
-            <li><span>Certified Information Security Manager (CISM)</span><span class="pill">ISACA</span></li>
-            <li><span>CompTIA Advanced Security Practitioner (CASP+)</span><span class="pill">CompTIA</span></li>
-            <li><span>CompTIA Cybersecurity Analyst (CySA+)</span><span class="pill">CompTIA</span></li>
-            <li><span>CompTIA PenTest+</span><span class="pill">CompTIA</span></li>
-            <li><span>CompTIA Security+</span><span class="pill">CompTIA</span></li>
-            <li><span>Microsoft Azure Security Technologies (AZ-500)</span><span class="pill">Microsoft</span></li>
-            <li><span>Microsoft Security Operations Analyst (SC-200)</span><span class="pill">Microsoft</span></li>
-            <li><span>Microsoft Security, Compliance &amp; Identity Fundamentals (SC-900)</span><span class="pill">Microsoft</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <div class="section-head">
         <h2>Why Clients Work With Us</h2>
         <p>Security guidance that is clear, practical, and aligned to business reality.</p>
       </div>
@@ -1098,6 +1097,8 @@
             <p>
               Whether you need a cybersecurity risk assessment, vulnerability review, cloud security guidance,
               or general consulting support, this is the place to start.
+              <br /><br />
+              Email: berneb@bullycyber.com
             </p>
           </div>
 
