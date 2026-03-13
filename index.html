@@ -550,36 +550,6 @@
       display: block;
     }
 
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .stat-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 16px 44px rgba(0, 0, 0, 0.08);
-    }
-
-    .stat-card strong {
-      display: block;
-      font-size: 1.7rem;
-      color: var(--green);
-      font-family: "Playfair Display", serif;
-    }
-
-    .stat-card span {
-      display: block;
-      margin-top: 0.25rem;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
     .contact-highlight {
       margin-bottom: 1rem;
       padding: 1rem;
@@ -621,42 +591,12 @@
       padding: 14px 26px;
       border-radius: 999px;
       text-decoration: none;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
       z-index: 999;
     }
 
     .mobile-call:hover {
       background: #174b74;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.95rem 1rem;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      font-family: inherit;
-      font-size: 1rem;
-      box-sizing: border-box;
-      background: rgba(255, 255, 255, 0.96);
-      color: #16324f;
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #6d87a1;
-    }
-
-    label {
-      display: block;
-      font-weight: 900;
-      color: #ffffff;
-      margin-bottom: 0.45rem;
     }
 
     footer {
@@ -742,27 +682,10 @@
     }
 
     @media (max-width: 900px) {
-      .col-4,
-      .col-6 {
-        grid-column: span 12;
-      }
-
-      .story-card,
-      .story-side {
-        grid-column: span 12;
-      }
-
-      .stat-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .trust-card {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .credential-grid {
-        grid-template-columns: 1fr;
-      }
+      .col-4 { grid-column: span 12; }
+      .story-card, .story-side { grid-column: span 12; }
+      .trust-card { grid-template-columns: 1fr 1fr; }
+      .credential-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
@@ -908,4 +831,360 @@
         <p>Technology and cybersecurity support designed for small businesses, offices, and local companies.</p>
       </div>
 
-      <div class="
+      <div class="grid">
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Computer Repair</h3>
+            <p class="story-p">
+              Fast support for slow computers, software issues, login problems,
+              and technical errors that interrupt business operations.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Business Email Setup</h3>
+            <p class="story-p">
+              Professional email setup using platforms like Microsoft 365 and Google Workspace.
+              We configure business email, accounts, and access so teams can work efficiently.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>WiFi &amp; Network Setup</h3>
+            <p class="story-p">
+              Setup and support for office WiFi, routers, connectivity, printers, and network basics
+              so your business stays connected and productive.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Backup &amp; Data Protection</h3>
+            <p class="story-p">
+              Protect your business from data loss, downtime, and ransomware with secure backups,
+              recovery planning, and practical protection for everyday business technology.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Small Business IT Support</h3>
+            <p class="story-p">
+              Practical day-to-day IT support for small businesses that need help with computers,
+              user issues, software problems, connectivity, and keeping systems running smoothly.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Security Setup</h3>
+            <p class="story-p">
+              Clear guidance to help secure computers, email, cloud accounts, backups, and business systems
+              without unnecessary complexity or confusing technical language.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Business Technology Setup</h3>
+            <p class="story-p">
+              We help businesses properly set up computers, WiFi networks, printers, and business systems
+              so everything works reliably and securely from day one.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Cloud &amp; Microsoft 365 Support</h3>
+            <p class="story-p">
+              Setup and support for Microsoft 365, user accounts, email access, file sharing,
+              permissions, and cloud administration for small business environments.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Business Security Checkup</h3>
+            <p class="story-p">
+              We review your computers, email, WiFi, backups, and business systems to identify security issues and practical ways to improve protection.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="section-head">
+        <h2>Who We Help</h2>
+        <p>Technology and cybersecurity support for growing businesses that need practical help.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-pad">
+          <ul class="names-list">
+            <li><span>Restaurants &amp; Hospitality Businesses</span><span class="pill">POS / WiFi / Security</span></li>
+            <li><span>Law Firms &amp; Professional Offices</span><span class="pill">Email / Data Security</span></li>
+            <li><span>Small Medical &amp; Service Businesses</span><span class="pill">System Protection</span></li>
+            <li><span>Startups &amp; Growing Companies</span><span class="pill">Technology Setup</span></li>
+            <li><span>Local Businesses Without IT Staff</span><span class="pill">Consulting</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="block">
+      <div class="section-head">
+        <h2>Why Bully Cyber Security</h2>
+        <p>Practical technology and cybersecurity guidance for organizations that need clarity, support, and real solutions.</p>
+      </div>
+
+      <div class="story-wrap">
+        <div class="story-card card">
+          <div class="card-pad">
+            <h3 class="story-title">Practical support for real business needs</h3>
+
+            <p class="story-p">
+              Bully Cyber Security helps small businesses keep their technology secure and running smoothly.
+            </p>
+
+            <p class="story-p">
+              We provide practical support for computer problems, email setup, WiFi networks, backups,
+              and cybersecurity protection. Our goal is to fix issues quickly, prevent security problems,
+              and make sure your business technology works reliably every day.
+            </p>
+
+            <p class="story-p">
+              Whether you need help securing your systems or simply getting your technology set up the right way,
+              we provide clear guidance and dependable support.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-side quote">
+          <strong>Focus Areas</strong>
+          <p>Small business support that combines security, reliability, and everyday technology help.</p>
+
+          <div class="tag-wrap">
+            <span class="tag">Computer Support</span>
+            <span class="tag">Email Setup</span>
+            <span class="tag">WiFi Setup</span>
+            <span class="tag">Ransomware Protection</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials" class="block">
+      <div class="section-head">
+        <h2>Trusted Security Professional</h2>
+        <p>Led by an experienced cybersecurity professional focused on practical protection and real business value.</p>
+      </div>
+
+      <div class="story-wrap">
+        <div class="story-side">
+          <div class="headshot-wrap">
+            <div class="headshot-frame">
+              <img src="headshot.jpg" alt="Berne Bully headshot" />
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card card">
+          <div class="card-pad">
+            <h3 class="story-title">Berne Bully, M.S. Cybersecurity — Founder</h3>
+
+            <div class="founder-meta">
+              <span class="pill">Small Business IT Support</span>
+              <span class="pill">Cybersecurity Support</span>
+              <span class="pill">Cloud &amp; Email Setup</span>
+            </div>
+
+            <p class="story-p">
+              Cybersecurity professional with experience in vulnerability management,
+              risk assessments, cloud security, compliance support, and security operations.
+            </p>
+
+            <p class="story-p">
+              Bully Cyber Security was created to help growing businesses get real cybersecurity guidance
+              without the enterprise-level confusion, inflated consulting model, or unnecessary complexity.
+            </p>
+
+            <p class="story-p">
+              The focus is simple: clear findings, stronger defenses, and practical next steps
+              that businesses can actually implement.
+            </p>
+
+            <div class="credential-stack">
+              <h4>Education &amp; Professional Certifications</h4>
+              <div class="credential-grid">
+                <div class="credential-item">Master of Science in Cybersecurity</div>
+                <div class="credential-item">Bachelor of Science in Information Technology</div>
+                <div class="credential-item">Associate of Science in Business Management</div>
+                <div class="credential-item">AWS Certified Security – Specialty<small>AWS</small></div>
+                <div class="credential-item">Certified Information Systems Auditor (CISA)<small>ISACA</small></div>
+                <div class="credential-item">Certified Information Security Manager (CISM)<small>ISACA</small></div>
+                <div class="credential-item">CompTIA Advanced Security Practitioner (CASP+)<small>CompTIA</small></div>
+                <div class="credential-item">CompTIA Cybersecurity Analyst (CySA+)<small>CompTIA</small></div>
+                <div class="credential-item">CompTIA PenTest+<small>CompTIA</small></div>
+                <div class="credential-item">CompTIA Security+<small>CompTIA</small></div>
+                <div class="credential-item">Microsoft Azure Security Technologies (AZ-500)<small>Microsoft</small></div>
+                <div class="credential-item">Microsoft Security Operations Analyst (SC-200)<small>Microsoft</small></div>
+                <div class="credential-item">Microsoft Security, Compliance &amp; Identity Fundamentals (SC-900)<small>Microsoft</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="section-head">
+        <h2>Why Clients Work With Us</h2>
+        <p>Technology support and security guidance that is clear, practical, and built for everyday business needs.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Easy to Understand</h3>
+            <p class="story-p">
+              We explain problems and solutions in plain language so business owners know what is happening and what needs to be done.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Professional Security Experience</h3>
+            <p class="story-p">
+              Built on real cybersecurity experience across risk, vulnerability management, cloud security, and security program support.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Practical Small Business Support</h3>
+            <p class="story-p">
+              From computer issues to email setup to business security, clients get support that helps them stay productive and protected.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="section-head">
+        <h2>What You Receive</h2>
+        <p>Every engagement is designed to leave you with clarity, direction, and technology that works better for your business.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-pad">
+          <ul class="names-list">
+            <li><span>Security risk summary</span><span class="pill">Included</span></li>
+            <li><span>Technology recommendations</span><span class="pill">Included</span></li>
+            <li><span>Business-focused action plan</span><span class="pill">Included</span></li>
+            <li><span>Practical support guidance</span><span class="pill">Included</span></li>
+            <li><span>Optional follow-up consulting</span><span class="pill">Available</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="block">
+      <div class="section-head">
+        <h2>How It Works</h2>
+        <p>A simple process designed to help your business solve technology issues and improve security with confidence.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-pad">
+          <ul class="timeline">
+            <li class="event">
+              <div class="time">Step 1</div>
+              <div class="meta">
+                <strong>Consultation</strong>
+                <span>We discuss your business, technology setup, current issues, and any security concerns you may have.</span>
+              </div>
+            </li>
+
+            <li class="event">
+              <div class="time">Step 2</div>
+              <div class="meta">
+                <strong>Assessment</strong>
+                <span>We review systems, devices, email, WiFi, backups, and business technology to identify issues, risks, and opportunities for improvement.</span>
+              </div>
+            </li>
+
+            <li class="event">
+              <div class="time">Step 3</div>
+              <div class="meta">
+                <strong>Recommendations &amp; Support Plan</strong>
+                <span>You receive a clear breakdown of issues, risks, and practical recommendations tailored to your business.</span>
+              </div>
+            </li>
+
+            <li class="event">
+              <div class="time">Step 4</div>
+              <div class="meta">
+                <strong>Next Steps</strong>
+                <span>We help prioritize improvements so your business can stay secure, efficient, and running smoothly.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="block">
+      <div class="section-head">
+        <h2>Need IT Help?</h2>
+        <p>Call or email for fast help with your business technology and security needs.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-pad">
+          <div class="contact-highlight">
+            <strong>Let’s talk about your business technology and security needs</strong>
+            <p>
+              Whether you need computer repair, IT support, business email setup,
+              WiFi setup, backup protection, ransomware protection, or cybersecurity guidance,
+              this is the place to start.
+              <br /><br />
+              Email: <a href="mailto:berneb@bullycyber.com">berneb@bullycyber.com</a>
+              <br />
+              Phone: <a href="tel:4079065796">407-906-5796</a>
+            </p>
+          </div>
+
+          <div style="text-align:center; margin-top:20px;">
+            <a class="btn btn-primary" href="tel:4079065796">Call Now</a>
+            <a class="btn btn-ghost" href="mailto:berneb@bullycyber.com">Send Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Bully Cyber Security
+  </footer>
+
+  <a class="mobile-call" href="tel:4079065796">📞 Call for IT Help</a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
