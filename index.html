@@ -1,259 +1,1631 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bully Cyber Security</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bully Cyber Security</title>
+  <meta
+    name="description"
+    content="Bully Cyber Security helps small businesses, home offices, and local residents keep their technology secure and running smoothly with practical IT support, email setup, WiFi help, backups, home service repairs, website setup, and cybersecurity protection."
+  />
+  <link rel="icon" type="image/png" href="bcs-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
 
-<meta name="description" content="Bully Cyber Security helps small businesses stay secure, fix IT issues, and prevent downtime with practical IT support and cybersecurity services in Central Florida." />
+  <style>
+    :root {
+      --green: #12395b;
+      --green2: #1e5b8f;
+      --gold: #37e6d4;
+      --text: #f4f8fc;
+      --muted: #d0dceb;
+      --border: rgba(255, 255, 255, 0.12);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+      --shadow2: 0 18px 52px rgba(30, 91, 143, 0.22);
+      --container: 1120px;
+      --radius: 24px;
+    }
 
-<link rel="icon" type="image/png" href="bcs-logo.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    html {
+      scroll-behavior: smooth;
+    }
 
-<style>
-/* ✅ YOUR ORIGINAL CSS — UNCHANGED */
-</style>
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 420px at 50% 0%, rgba(30, 91, 143, 0.22), transparent 60%),
+        radial-gradient(700px 440px at 12% 18%, rgba(55, 230, 212, 0.12), transparent 55%),
+        radial-gradient(760px 460px at 88% 20%, rgba(69, 124, 191, 0.10), transparent 60%),
+        linear-gradient(180deg, #18324e, #24486d 58%, #2c547d 100%);
+      overflow-x: hidden;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: auto;
+      padding: 2rem 1.25rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(20, 42, 66, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .monogram {
+      width: 90px;
+      height: 90px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--green), var(--green2));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 16px 40px rgba(18, 57, 91, 0.25);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .monogram img {
+      width: 92%;
+      height: 92%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      color: #ffffff;
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    }
+
+    .brand-copy span {
+      font-size: 0.92rem;
+      color: #e6f4ff;
+      font-weight: 700;
+      letter-spacing: 0.1px;
+      display: block;
+      margin-top: 0.08rem;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 800;
+      color: #eef7ff;
+      padding: 0.5rem 0.8rem;
+      border-radius: 999px;
+      transition: 0.18s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    .nav-links a.cta {
+      background: linear-gradient(135deg, var(--green2), #2b78b9);
+      color: white;
+      box-shadow: var(--shadow2);
+    }
+
+    .nav-links a.cta:hover {
+      background: #174b74;
+      color: white;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4.25rem 1rem 2.5rem;
+      background-image:
+        linear-gradient(180deg, rgba(10, 22, 38, 0.42), rgba(10, 22, 38, 0.28)),
+        url("cyber-hero.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(55, 230, 212, 0.12), transparent 35%),
+        radial-gradient(circle at 80% 20%, rgba(30, 91, 143, 0.14), transparent 35%);
+      pointer-events: none;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-logo {
+      display: block;
+      width: 92px;
+      max-width: 24vw;
+      margin: 0 auto 0.85rem;
+      filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.28));
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      margin: 0;
+      color: #fff;
+      font-weight: 700;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      margin-top: 0.8rem;
+      color: #f5fbff;
+      font-weight: 700;
+      line-height: 1.8;
+      font-size: 1.02rem;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-actions {
+      margin-top: 1.25rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-proof {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .hero-proof span {
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .btn {
+      padding: 0.95rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.18s ease;
+    }
+
+    .btn-primary {
+      background: var(--green2);
+      color: white;
+      box-shadow: var(--shadow2);
+    }
+
+    .btn-primary:hover {
+      background: #174b74;
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      color: white;
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.20);
+      transform: translateY(-1px);
+    }
+
+    .hero-card {
+      margin: 1.5rem auto 0;
+      max-width: 920px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 28px;
+      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.16);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 1.2rem;
+    }
+
+    .hero-chips {
+      display: flex;
+      justify-content: center;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+      margin-top: 0.2rem;
+    }
+
+    .hero-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.58rem 0.78rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .contact-strip {
+      max-width: 920px;
+      margin: 1rem auto 0;
+      padding: 0.9rem 1rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.14);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .contact-strip a,
+    .contact-strip span {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .contact-strip a:hover {
+      text-decoration: underline;
+    }
+
+    .trust-bar {
+      margin-top: -20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .trust-wrap {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .trust-card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 1rem 1.1rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .trust-item {
+      text-align: center;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      color: var(--green);
+    }
+
+    .trust-item span {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #4f6780;
+    }
+
+    section.block {
+      margin-top: 3rem;
+    }
+
+    .section-head h2 {
+      font-family: "Playfair Display", serif;
+      color: #ffffff;
+      margin: 0;
+      font-size: clamp(1.45rem, 2.8vw, 1.95rem);
+      text-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+    }
+
+    .section-head p {
+      color: #eef7ff;
+      margin: 0.35rem 0 1rem;
+      line-height: 1.7;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+    }
+
+    .col-4 {
+      grid-column: span 4;
+    }
+
+    .col-6 {
+      grid-column: span 6;
+    }
+
+    .col-12 {
+      grid-column: span 12;
+    }
+
+    .card {
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background: rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .card-pad {
+      padding: 1.15rem;
+    }
+
+    .story-wrap {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+    }
+
+    .story-card {
+      grid-column: span 8;
+    }
+
+    .story-side {
+      grid-column: span 4;
+    }
+
+    .story-title {
+      font-family: "Playfair Display", serif;
+      color: #ffffff;
+      margin: 0.1rem 0 0.5rem;
+      font-size: 1.5rem;
+      white-space: pre-line;
+    }
+
+    .story-p {
+      color: #f0f7ff;
+      line-height: 1.8;
+      margin: 0.65rem 0 0;
+      font-weight: 600;
+    }
+
+    .quote {
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background:
+        radial-gradient(700px 240px at 15% 0%, rgba(55, 230, 212, 0.12), transparent 55%),
+        rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.10);
+      padding: 1.05rem 1.1rem;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .quote strong {
+      display: block;
+      color: #ffffff;
+      font-weight: 900;
+      margin-bottom: 0.3rem;
+    }
+
+    .quote p {
+      margin: 0;
+      color: #eff7ff;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .tag-wrap {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.85rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 0.5rem 0.75rem;
+      background: rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      font-weight: 800;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .names-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .names-list li {
+      padding: 0.78rem 0.9rem;
+      background: rgba(255, 255, 255, 0.10);
+      border-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .pill {
+      font-size: 0.82rem;
+      font-weight: 900;
+      padding: 0.3rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      white-space: nowrap;
+    }
+
+    .timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .event {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      padding: 0.95rem;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .event .time {
+      min-width: 110px;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    .event .meta strong {
+      display: block;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 0.12rem;
+    }
+
+    .event .meta span {
+      color: #eef7ff;
+      font-weight: 650;
+      line-height: 1.55;
+      display: block;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .stat-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 16px 44px rgba(0, 0, 0, 0.08);
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 1.7rem;
+      color: var(--green);
+      font-family: "Playfair Display", serif;
+    }
+
+    .stat-card span {
+      display: block;
+      margin-top: 0.25rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .contact-highlight {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 18px;
+      background:
+        radial-gradient(700px 240px at 12% 0%, rgba(55, 230, 212, 0.12), transparent 55%),
+        rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .contact-highlight strong {
+      display: block;
+      color: #ffffff;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-highlight p {
+      margin: 0;
+      color: #f0f7ff;
+      font-weight: 650;
+      line-height: 1.7;
+    }
+
+    .contact-highlight a {
+      color: #ffffff;
+      font-weight: 800;
+      text-decoration: underline;
+    }
+
+    .mobile-call {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #1e5b8f, #2b78b9);
+      color: white;
+      font-weight: 800;
+      padding: 14px 26px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      z-index: 999;
+      white-space: nowrap;
+    }
+
+    .mobile-call:hover {
+      background: #174b74;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.95rem 1rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-family: inherit;
+      font-size: 1rem;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.96);
+      color: #16324f;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #6d87a1;
+    }
+
+    label {
+      display: block;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 0.45rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #f0f7ff;
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+    .headshot-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .headshot-frame {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      padding: 8px;
+      background: linear-gradient(135deg, var(--green2), var(--gold));
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+    }
+
+    .headshot-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      border: 4px solid rgba(255, 255, 255, 0.50);
+      background: #dbe7f2;
+    }
+
+    .founder-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.35rem 0 0.9rem;
+    }
+
+    .founder-meta .pill {
+      font-size: 0.8rem;
+    }
+
+    .credential-stack {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .credential-stack h4 {
+      margin: 0 0 0.75rem;
+      font-size: 1rem;
+      color: #ffffff;
+    }
+
+    .credential-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.65rem;
+    }
+
+    .credential-item {
+      padding: 0.72rem 0.8rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .credential-item small {
+      display: block;
+      margin-top: 0.2rem;
+      color: #eef7ff;
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .col-4,
+      .col-6 {
+        grid-column: span 12;
+      }
+
+      .story-card,
+      .story-side {
+        grid-column: span 12;
+      }
+
+      .stat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-card {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .credential-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .brand {
+        justify-content: center;
+      }
+
+      .nav-links {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+      }
+
+      .nav-links a {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.95rem;
+      }
+
+      .trust-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 3.5rem 1rem 2rem;
+      }
+
+      .hero-logo {
+        width: 82px;
+        margin-bottom: 0.7rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.95rem, 8vw, 2.7rem);
+      }
+
+      .hero p {
+        font-size: 0.98rem;
+        line-height: 1.7;
+      }
+
+      .headshot-frame {
+        width: 220px;
+        height: 220px;
+      }
+
+      .contact-strip {
+        padding: 0.9rem;
+      }
+
+      .mobile-call {
+        bottom: 12px;
+        width: calc(100% - 24px);
+        max-width: 360px;
+        text-align: center;
+        padding: 13px 18px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="nav container">
+    <a class="brand" href="#top">
+      <div class="monogram">
+        <img src="bcs-logo.png" alt="BCS logo" />
+      </div>
+      <div class="brand-copy">
+        <strong>Bully Cyber Security</strong>
+        <span>Small Business IT Support, Home Service Repairs &amp; Security Help</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#process">Process</a>
+      <a href="#contact" class="cta">Consultation</a>
+    </div>
+  </div>
 
-<!-- NAV -->
-<div class="nav container">
-<a class="brand" href="#top">
-<div class="monogram">
-<img src="bcs-logo.png" alt="BCS logo" />
-</div>
-<div class="brand-copy">
-<strong>Bully Cyber Security</strong>
-<span>Small Business IT Support, Home Service Repairs & Security Help</span>
-</div>
-</a>
+  <header class="hero" id="top">
+    <img class="hero-logo" src="bcs-logo.png" alt="BCS logo" />
+    <h1>Small Business IT Support, Home Service Repairs, Email Setup, and Security Help</h1>
+    <p>
+      We help small businesses, home offices, and local residents fix technology problems,
+      protect their systems, and keep things running smoothly. Serving Orlando, St. Cloud,
+      Davenport, Tampa and surrounding Central Florida communities.
+    </p>
 
-<div class="nav-links">
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#credentials">Credentials</a>
-<a href="#process">Process</a>
-<a href="#contact" class="cta">Get My Free Checkup</a>
-</div>
-</div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#contact">Book a Consultation</a>
+      <a class="btn btn-ghost" href="#services">View Services</a>
+    </div>
 
-<!-- HERO -->
-<header class="hero" id="top">
+    <div class="hero-proof">
+      <span>✔ Orlando-area service</span>
+      <span>✔ Small business focused</span>
+      <span>✔ Cybersecurity-certified founder</span>
+    </div>
 
-<img class="hero-logo" src="bcs-logo.png" alt="BCS logo" />
+    <div class="hero-card">
+      <div class="hero-chips">
+        <div class="hero-chip">💻 Computer Repair</div>
+        <div class="hero-chip">🏠 Home Service Repairs</div>
+        <div class="hero-chip">🦠 Virus &amp; Malware Removal</div>
+        <div class="hero-chip">📧 Business Email Setup</div>
+        <div class="hero-chip">🌐 Website Setup</div>
+        <div class="hero-chip">📶 WiFi &amp; Network Setup</div>
+        <div class="hero-chip">📡 WiFi Troubleshooting</div>
+        <div class="hero-chip">🛡️ Backup &amp; Data Protection</div>
+        <div class="hero-chip">🔐 Security Setup</div>
+      </div>
+    </div>
 
-<h1>Fast, Reliable IT Support & Cybersecurity for Small Businesses in Central Florida</h1>
+    <div class="contact-strip">
+      <a class="btn btn-primary" href="tel:4079065796">Call Now</a>
+      <a class="btn btn-ghost" href="mailto:berneb@bullycyber.com">Send Email</a>
+    </div>
+  </header>
 
-<p>
-We fix technology problems, secure your systems, and keep your business running without downtime, confusion, or overpriced contracts.
-</p>
+  <section class="trust-bar">
+    <div class="trust-wrap">
+      <div class="trust-card">
+        <div class="trust-item">
+          <strong>Secure</strong>
+          <span>Protect your systems and devices</span>
+        </div>
+        <div class="trust-item">
+          <strong>Reliable</strong>
+          <span>Keep technology running smoothly</span>
+        </div>
+        <div class="trust-item">
+          <strong>Clear</strong>
+          <span>Simple help without technical jargon</span>
+        </div>
+        <div class="trust-item">
+          <strong>Practical</strong>
+          <span>Support for homes and businesses</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<p style="margin-top:10px; font-weight:700;">
-⚠️ Most small businesses are vulnerable to cyber threats without realizing it — we help you fix that fast.
-</p>
+  <main class="container">
+    <section class="block" id="top-services">
+      <div class="section-head">
+        <h2>Most Requested Business Services</h2>
+        <p>Start with the services that solve the biggest business problems fastest.</p>
+      </div>
+      <div class="grid">
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Small Business IT Support</h3>
+            <p class="story-p">
+              Ongoing help for computer issues, users, Microsoft 365, printers, and
+              network problems.
+            </p>
+            <p><strong>Starting at $99/hr</strong></p>
+            <a class="btn btn-primary" href="tel:4079065796">Call About IT Support</a>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Microsoft 365 Security Hardening</h3>
+            <p class="story-p">
+              Protect email, admin accounts, MFA, and cloud access before a breach happens.
+            </p>
+            <p><strong>Starting at $249</strong></p>
+            <a class="btn btn-primary" href="tel:4079065796">Secure My Microsoft 365</a>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Business Security Review</h3>
+            <p class="story-p">
+              A practical review of email, WiFi, backups, devices, and business risk areas.
+            </p>
+            <p><strong>Starting at $399</strong></p>
+            <a class="btn btn-primary" href="tel:4079065796">Book a Security Review</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<p style="margin-top:10px; font-weight:700;">
-📍 Serving Orlando, St. Cloud, Davenport, Tampa & surrounding Central Florida areas
-</p>
+    <section class="block" id="reviews">
+      <div class="section-head">
+        <h2>What Clients Appreciate</h2>
+        <p>Clear communication, fast problem solving, and practical security guidance.</p>
+      </div>
+      <div class="grid">
+        <div class="card col-4">
+          <div class="card-pad">
+            <p class="story-p">
+              “Fast, professional, and explained everything in plain English. Our email
+              and Wi-Fi issues were fixed the same week.”
+            </p>
+            <p><strong>— Small Business Owner</strong></p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <p class="story-p">
+              “Very knowledgeable and easy to work with. We finally have our Microsoft 365
+              and backups set up correctly.”
+            </p>
+            <p><strong>— Local Office Client</strong></p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <p class="story-p">
+              “We needed IT help without hiring full-time staff. This was exactly the
+              practical support we needed.”
+            </p>
+            <p><strong>— Growing Company</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="hero-actions">
-<a class="btn btn-primary" href="#contact">Get My Free Checkup</a>
-<a class="btn btn-ghost" href="#services">View Services</a>
-</div>
+    <section id="services" class="block">
+      <div class="section-head">
+        <h2>Services</h2>
+        <p>Technology and cybersecurity support designed for small businesses, home offices, and local residents.</p>
+      </div>
+      <div class="grid">
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Computer Repair</h3>
+            <p class="story-p">
+              Fast support for slow computers, software issues, login problems, and technical
+              errors that interrupt business operations or home use.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Home Service Repairs</h3>
+            <p class="story-p">
+              On-site home technology support for computers, printers, WiFi issues, email setup,
+              device troubleshooting, and everyday tech problems.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Business Email Setup</h3>
+            <p class="story-p">
+              Professional email setup using platforms like Microsoft 365 and Google Workspace.
+              We configure business email, accounts, and access so teams can work efficiently.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>New Computer Setup</h3>
+            <p class="story-p">
+              Setup for new computers including account configuration, software installation,
+              email setup, printer connection, security basics, and getting everything ready to use.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Virus &amp; Malware Removal</h3>
+            <p class="story-p">
+              Help removing viruses, malware, pop-ups, suspicious software, and other threats
+              that slow down your computer or put your information at risk.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Website Setup &amp; Basic Business Websites</h3>
+            <p class="story-p">
+              Setup for simple business websites including basic page design, contact forms,
+              business information, and getting your site ready for customers to view and use.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>WiFi &amp; Network Setup</h3>
+            <p class="story-p">
+              Setup and support for office or home WiFi, routers, connectivity, printers, and
+              network basics so you stay connected and productive.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>WiFi Troubleshooting &amp; Optimization</h3>
+            <p class="story-p">
+              Support for slow WiFi, dropped connections, weak signal areas, printer connection
+              problems, and network issues so your home or business stays connected and running smoothly.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Backup &amp; Data Protection</h3>
+            <p class="story-p">
+              Protect your business or home office from data loss, downtime, and ransomware with
+              secure backups, recovery planning, and practical protection for everyday technology.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Small Business IT Support</h3>
+            <p class="story-p">
+              Practical day-to-day IT support for small businesses that need help with computers,
+              user issues, software problems, connectivity, and keeping systems running smoothly.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Security Setup</h3>
+            <p class="story-p">
+              Clear guidance to help secure computers, email, cloud accounts, backups, and business
+              systems without unnecessary complexity or confusing technical language.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Business Technology Setup</h3>
+            <p class="story-p">
+              We help businesses properly set up computers, WiFi networks, printers, and business
+              systems so everything works reliably and securely from day one.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Cloud &amp; Microsoft 365 Support</h3>
+            <p class="story-p">
+              Setup and support for Microsoft 365, user accounts, email access, file sharing,
+              permissions, and cloud administration for small business environments.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Business Security Checkup</h3>
+            <p class="story-p">
+              We review your computers, email, WiFi, backups, and business systems to identify
+              security issues and practical ways to improve protection.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Cybersecurity Risk Assessment</h3>
+            <p class="story-p">
+              A structured review of your systems, email, cloud services, backups, and business
+              processes to identify risk areas and provide practical recommendations.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Microsoft 365 Security Hardening</h3>
+            <p class="story-p">
+              Improve protection for Microsoft 365 with stronger account security, MFA setup,
+              email protection, admin review, and better configuration for small business use.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="hero-card">
-<div class="hero-chips">
-<div class="hero-chip">💻 IT Support</div>
-<div class="hero-chip">🔐 Cybersecurity</div>
-<div class="hero-chip">📧 Business Email</div>
-<div class="hero-chip">📶 WiFi & Network</div>
-<div class="hero-chip">🛠️ Computer Repair</div>
-</div>
-</div>
+    <section class="block" id="pricing">
+      <div class="section-head">
+        <h2>Starting Prices</h2>
+        <p>
+          Clear starting prices for common services. Many services are offered at flat starting
+          rates, while ongoing support and larger projects may be billed hourly or quoted based
+          on scope. Final pricing may vary depending on the number of devices, users, and overall
+          system complexity.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-pad">
+          <ul class="names-list">
+            <li><span>Computer Repair</span><span class="pill">Starting at $99</span></li>
+            <li><span>In-Home Tech Repairs</span><span class="pill">Starting at $99</span></li>
+            <li><span>New Computer Setup</span><span class="pill">Starting at $129</span></li>
+            <li><span>Virus &amp; Malware Removal</span><span class="pill">Starting at $129</span></li>
+            <li><span>Business Email Setup</span><span class="pill">Starting at $129</span></li>
+            <li><span>Website Setup &amp; Basic Business Websites</span><span class="pill">Starting at $199</span></li>
+            <li><span>WiFi &amp; Network Setup</span><span class="pill">Starting at $149</span></li>
+            <li><span>WiFi Troubleshooting &amp; Optimization</span><span class="pill">Starting at $99</span></li>
+            <li><span>Backup &amp; Data Protection</span><span class="pill">Starting at $149</span></li>
+            <li><span>Small Business IT Support</span><span class="pill">Starting at $99/hr</span></li>
+            <li><span>Small Business Security Checkup</span><span class="pill">Starting at $149</span></li>
+            <li><span>Business Security Review</span><span class="pill">Starting at $399</span></li>
+            <li><span>Microsoft 365 Security Hardening</span><span class="pill">Starting at $249</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<div class="contact-strip">
-<a class="btn btn-primary" href="tel:4079065796">Call for Fast Help</a>
-<a class="btn btn-ghost" href="mailto:berneb@bullycyber.com">Request Help by Email</a>
-</div>
+    <section class="block" id="free-checkup">
+      <div class="section-head">
+        <h2>Free IT Security Checkup</h2>
+        <p>A simple first step for small businesses that want to improve security and make sure their systems are set up the right way.</p>
+      </div>
+      <div class="card">
+        <div class="card-pad">
+          <p class="story-p">
+            Our free 15-minute IT security checkup helps identify common issues with WiFi, email,
+            backups, device security, and overall technology setup. It is a simple way to get
+            practical feedback before committing to a larger service.
+          </p>
 
-</header>
+          <div class="contact-highlight" style="margin-top: 1rem;">
+            <strong>Free 15-Minute Business IT Security Checkup</strong>
+            <p>
+              Find out where your biggest risks and technology gaps are before they become downtime,
+              lost data, or expensive cleanups.
+            </p>
+          </div>
 
-<!-- MAIN -->
-<main class="container">
+          <ul class="names-list" style="margin-top: 1rem;">
+            <li><span>Email security review</span><span class="pill">Included</span></li>
+            <li><span>WiFi and network basics review</span><span class="pill">Included</span></li>
+            <li><span>Backup protection check</span><span class="pill">Included</span></li>
+            <li><span>Basic security recommendations</span><span class="pill">Included</span></li>
+          </ul>
 
-<!-- SERVICES -->
-<section id="services" class="block">
-<div class="section-head">
-<h2>Services</h2>
-<p>
-We help small businesses stay secure, productive, and stress-free by handling IT problems and protecting their systems.
-</p>
-</div>
+          <div style="text-align:center; margin-top:20px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="tel:4079065796">Book Free Checkup</a>
+            <a class="btn btn-ghost" href="mailto:berneb@bullycyber.com?subject=Free%2015-Minute%20IT%20Security%20Checkup">Request by Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- ✅ YOUR FULL ORIGINAL SERVICES GRID STAYS HERE -->
-</section>
+    <section class="block">
+      <div class="section-head">
+        <h2>Who We Help</h2>
+        <p>Technology and cybersecurity support for growing businesses, home offices, and local clients who need practical help.</p>
+      </div>
+      <div class="card">
+        <div class="card-pad">
+          <ul class="names-list">
+            <li><span>Restaurants &amp; Hospitality Businesses</span><span class="pill">POS / WiFi / Security</span></li>
+            <li><span>Law Firms &amp; Professional Offices</span><span class="pill">Email / Data Security</span></li>
+            <li><span>Small Medical &amp; Service Businesses</span><span class="pill">System Protection</span></li>
+            <li><span>Startups &amp; Growing Companies</span><span class="pill">Technology Setup</span></li>
+            <li><span>Local Businesses Without IT Staff</span><span class="pill">Consulting</span></li>
+            <li><span>Home Offices &amp; Residential Clients</span><span class="pill">On-Site Help</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<!-- PRICING -->
-<section class="block">
-<div class="section-head">
-<h2>Starting Prices</h2>
-<p>Clear pricing for common services.</p>
-</div>
+    <section id="about" class="block">
+      <div class="section-head">
+        <h2>Why Bully Cyber Security</h2>
+        <p>Practical technology and cybersecurity guidance for organizations and local clients that need clarity, support, and real solutions.</p>
+      </div>
+      <div class="story-wrap">
+        <div class="story-card card">
+          <div class="card-pad">
+            <h3 class="story-title">Practical support for real business needs</h3>
+            <p class="story-p">
+              Bully Cyber Security helps small businesses, home offices, and local clients keep
+              their technology secure and running smoothly.
+            </p>
+            <p class="story-p">
+              We provide practical support for computer problems, email setup, WiFi networks,
+              backups, home service repairs, website setup, and cybersecurity protection. Our
+              goal is to fix issues quickly, prevent security problems, and make sure your
+              technology works reliably every day.
+            </p>
+            <p class="story-p">
+              Whether you need help securing your systems, solving everyday computer issues, or
+              getting your technology set up the right way, we provide clear guidance and dependable support.
+            </p>
+          </div>
+        </div>
+        <div class="story-side quote">
+          <strong>Focus Areas</strong>
+          <p>Small business and home support that combines security, reliability, and everyday technology help.</p>
+          <div class="tag-wrap">
+            <span class="tag">Computer Support</span>
+            <span class="tag">Home Service Repairs</span>
+            <span class="tag">Website Setup</span>
+            <span class="tag">WiFi Setup</span>
+            <span class="tag">Ransomware Protection</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- ✅ ORIGINAL PRICING LIST UNCHANGED -->
-</section>
+    <section id="credentials" class="block">
+      <div class="section-head">
+        <h2>Trusted Security Professional</h2>
+        <p>Led by an experienced cybersecurity professional focused on practical protection and real business value.</p>
+      </div>
+      <div class="story-wrap">
+        <div class="story-side">
+          <div class="headshot-wrap">
+            <div class="headshot-frame">
+              <img src="headshot.jpg" alt="Berne Bully Jr headshot" />
+            </div>
+          </div>
+        </div>
+        <div class="story-card card">
+          <div class="card-pad">
+            <h3 class="story-title">Berne Bully Jr., M.S. Cybersecurity Founder — Bully Cyber Security </h3>
+            <div class="founder-meta">
+              <span class="pill">Small Business IT Support</span>
+              <span class="pill">Cybersecurity Support</span>
+              <span class="pill">Cloud &amp; Email Setup</span>
+            </div>
+            <p class="story-p">
+              Cybersecurity professional with experience in vulnerability management, risk
+              assessments, cloud security, compliance support, and security operations.
+            </p>
+            <p class="story-p">
+              Bully Cyber Security was created to help growing businesses get real cybersecurity
+              guidance without the enterprise-level confusion, inflated consulting model, or unnecessary complexity.
+            </p>
+            <p class="story-p">
+              The focus is simple: clear findings, stronger defenses, and practical next steps
+              that businesses and local clients can actually implement.
+            </p>
+            <p class="story-p">
+              LinkedIn:
+              <a
+                href="https://www.linkedin.com/in/berne-bully"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color:#ffffff; font-weight:800; text-decoration:underline;"
+              >
+                www.linkedin.com/in/berne-bully
+              </a>
+            </p>
+            <div class="credential-stack">
+              <h4>Education &amp; Professional Certifications</h4>
+              <div class="credential-grid">
+                <div class="credential-item">
+                  Master of Science in Cybersecurity
+                  <small>Western Governors University</small>
+                </div>
+                <div class="credential-item">
+                  Bachelor of Science in Information Technology
+                  <small>Clayton State University</small>
+                </div>
+                <div class="credential-item">
+                  Associate of Science in Business Management
+                  <small>Southern Crescent Tech</small>
+                </div>
+                <div class="credential-item">
+                  AWS Certified Security – Specialty
+                  <small>AWS</small>
+                </div>
+                <div class="credential-item">
+                  Certified Information Systems Auditor (CISA)
+                  <small>ISACA</small>
+                </div>
+                <div class="credential-item">
+                  Certified Information Security Manager (CISM)
+                  <small>ISACA</small>
+                </div>
+                <div class="credential-item">
+                  CompTIA Advanced Security Practitioner (CASP+)
+                  <small>CompTIA</small>
+                </div>
+                <div class="credential-item">
+                  CompTIA Cybersecurity Analyst (CySA+)
+                  <small>CompTIA</small>
+                </div>
+                <div class="credential-item">
+                  CompTIA PenTest+
+                  <small>CompTIA</small>
+                </div>
+                <div class="credential-item">
+                  CompTIA Security+
+                  <small>CompTIA</small>
+                </div>
+                <div class="credential-item">
+                  Microsoft Azure Security Technologies (AZ-500)
+                  <small>Microsoft</small>
+                </div>
+                <div class="credential-item">
+                  Microsoft Security Operations Analyst (SC-200)
+                  <small>Microsoft</small>
+                </div>
+                <div class="credential-item">
+                  Microsoft Security, Compliance &amp; Identity Fundamentals (SC-900)
+                  <small>Microsoft</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- FREE CHECKUP -->
-<section class="block">
-<div class="section-head">
-<h2>Free IT Security Checkup</h2>
-<p>A simple first step to protect your business.</p>
-</div>
+    <section class="block">
+      <div class="section-head">
+        <h2>Why Clients Work With Us</h2>
+        <p>Technology support and security guidance that is clear, practical, and built for everyday business and home needs.</p>
+      </div>
+      <div class="grid">
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Easy to Understand</h3>
+            <p class="story-p">
+              We explain problems and solutions in plain language so business owners and home users
+              know what is happening and what needs to be done.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Professional Security Experience</h3>
+            <p class="story-p">
+              Built on real cybersecurity experience across risk, vulnerability management,
+              cloud security, and security program support.
+            </p>
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Practical Support</h3>
+            <p class="story-p">
+              From computer issues to email setup to business security, website setup, and home
+              service repairs, clients get support that helps them stay productive and protected.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<div class="card-pad">
+    <section class="block">
+      <div class="section-head">
+        <h2>What You Receive</h2>
+        <p>Every engagement is designed to leave you with clarity, direction, and technology that works better for your business or home office.</p>
+      </div>
+      <div class="card">
+        <div class="card-pad">
+          <ul class="names-list">
+            <li><span>Security risk summary</span><span class="pill">Included</span></li>
+            <li><span>Technology recommendations</span><span class="pill">Included</span></li>
+            <li><span>Business-focused action plan</span><span class="pill">Included</span></li>
+            <li><span>Practical support guidance</span><span class="pill">Included</span></li>
+            <li><span>Optional follow-up consulting</span><span class="pill">Available</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<p class="story-p">
-Our free 15-minute IT security checkup helps uncover hidden risks before they turn into expensive problems.
-</p>
+    <section id="process" class="block">
+      <div class="section-head">
+        <h2>How It Works</h2>
+        <p>A simple process designed to help your business or home office solve technology issues and improve security with confidence.</p>
+      </div>
+      <div class="card">
+        <div class="card-pad">
+          <ul class="timeline">
+            <li class="event">
+              <div class="time">Step 1</div>
+              <div class="meta">
+                <strong>Consultation</strong>
+                <span>We discuss your business or home technology setup, current issues, and any security concerns you may have.</span>
+              </div>
+            </li>
+            <li class="event">
+              <div class="time">Step 2</div>
+              <div class="meta">
+                <strong>Assessment</strong>
+                <span>We review systems, devices, email, WiFi, backups, and technology needs to identify issues, risks, and opportunities for improvement.</span>
+              </div>
+            </li>
+            <li class="event">
+              <div class="time">Step 3</div>
+              <div class="meta">
+                <strong>Recommendations &amp; Support Plan</strong>
+                <span>You receive a clear breakdown of issues, risks, and practical recommendations tailored to your business or home setup.</span>
+              </div>
+            </li>
+            <li class="event">
+              <div class="time">Step 4</div>
+              <div class="meta">
+                <strong>Next Steps</strong>
+                <span>We help prioritize improvements so your systems can stay secure, efficient, and running smoothly.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<p class="story-p">
-You’ll get clear, practical recommendations with no pressure — just straightforward advice.
-</p>
+    <section id="contact" class="block">
+      <div class="section-head">
+        <h2>Need IT Help?</h2>
+        <p>Call or email for fast help with your business, home office, or home technology needs.</p>
+      </div>
+      <div class="card">
+        <div class="card-pad">
+          <div class="contact-highlight">
+            <strong>Let’s talk about your technology and security needs</strong>
+            <p>
+              Whether you need computer repair, home service repairs, IT support, business email
+              setup, website setup, WiFi setup, backup protection, ransomware protection, or
+              cybersecurity guidance, this is the place to start. Most services begin with a quick
+              conversation and a clear quote.
+              <br /><br />
+              Email: <a href="mailto:berneb@bullycyber.com">berneb@bullycyber.com</a>
+              <br />
+              Phone: <a href="tel:4079065796">407-906-5796</a>
+            </p>
+          </div>
 
-<p style="margin-top:10px; font-weight:800;">
-✔ Identify security gaps<br>
-✔ Prevent downtime<br>
-✔ Get clear next steps
-</p>
+          <div style="text-align:center; margin-top:20px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="tel:4079065796">Call Now</a>
+            <a class="btn btn-ghost" href="mailto:berneb@bullycyber.com">Send Email</a>
+          </div>
 
-<div style="text-align:center; margin-top:20px;">
-<a class="btn btn-primary" href="#contact">Get My Free Checkup</a>
-</div>
+          <form action="https://formspree.io/f/your-form-id" method="POST" style="margin-top:1.25rem;">
+            <div class="grid">
+              <div class="col-6">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="col-6">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="col-6">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="Best number to reach you" />
+              </div>
+              <div class="col-6">
+                <label for="service">Service Needed</label>
+                <input id="service" name="service" type="text" placeholder="IT support, email setup, WiFi, security review" />
+              </div>
+              <div class="col-12">
+                <label for="message">What do you need help with?</label>
+                <textarea id="message" name="message" placeholder="Tell us what is going wrong and how soon you need help."></textarea>
+              </div>
+              <div class="col-12" style="text-align:center;">
+                <button class="btn btn-primary" type="submit" style="border:none; cursor:pointer;">
+                  Request a Quote
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</div>
-</div>
-</section>
+  <footer>
+    © <span id="year"></span> Bully Cyber Security •
+    <a href="https://www.linkedin.com/in/berne-bully" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </footer>
 
-<!-- WHO YOU HELP -->
-<section class="block">
-<div class="section-head">
-<h2>Who We Help</h2>
-<p>Support for local businesses and clients.</p>
-</div>
+  <a class="mobile-call" href="tel:4079065796">📞 Call Now</a>
 
-<!-- ORIGINAL LIST UNCHANGED -->
-</section>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Bully Cyber Security",
+      "telephone": "+1-407-906-5796",
+      "email": "berneb@bullycyber.com",
+      "url": "https://bullycyber.com",
+      "areaServed": [
+        "Orlando, Florida",
+        "St. Cloud, Florida",
+        "Davenport, Florida",
+        "Tampa, Florida"
+      ],
+      "description": "Small business IT support, cybersecurity help, Microsoft 365 setup, WiFi support, backups, and computer repair."
+    }
+  </script>
 
-<!-- ABOUT -->
-<section id="about" class="block">
-<div class="section-head">
-<h2>Why Bully Cyber Security</h2>
-<p>Practical support for real needs.</p>
-</div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-<!-- ORIGINAL CONTENT UNCHANGED -->
-</section>
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.gtag) {
+          gtag("event", "click_to_call", {
+            event_category: "lead",
+            event_label: link.getAttribute("href")
+          });
+        }
+      });
+    });
 
-<!-- CREDENTIALS -->
-<section id="credentials" class="block">
-<div class="section-head">
-<h2>Trusted Security Professional</h2>
-<p>Led by experienced cybersecurity expertise.</p>
-</div>
+    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.gtag) {
+          gtag("event", "email_click", {
+            event_category: "lead",
+            event_label: link.getAttribute("href")
+          });
+        }
+      });
+    });
 
-<!-- ORIGINAL CONTENT UNCHANGED -->
-</section>
-
-<!-- WHY CLIENTS -->
-<section class="block">
-<div class="section-head">
-<h2>Why Clients Work With Us</h2>
-<p>
-We combine real cybersecurity expertise with practical IT support to give small businesses reliable, easy-to-understand solutions without the complexity.
-</p>
-</div>
-
-<!-- ORIGINAL CARDS -->
-</section>
-
-<!-- 🔥 FOUNDING OFFER (NEW) -->
-<section class="block">
-<div class="section-head">
-<h2>Founding Client Offer</h2>
-<p>Work directly with a cybersecurity professional and get priority support.</p>
-</div>
-
-<div class="card">
-<div class="card-pad">
-
-<p class="story-p">
-We are currently working with a small number of local businesses to improve IT systems and security.
-</p>
-
-<ul class="names-list" style="margin-top: 1rem;">
-<li><span>Priority support</span><span class="pill">Included</span></li>
-<li><span>Discounted rates</span><span class="pill">Limited</span></li>
-<li><span>Direct expert access</span><span class="pill">Included</span></li>
-</ul>
-
-</div>
-</div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" class="block">
-<div class="section-head">
-<h2>How It Works</h2>
-<p>Simple process.</p>
-</div>
-
-<!-- ORIGINAL PROCESS -->
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="block">
-<div class="section-head">
-<h2>Need IT Help?</h2>
-<p>Call or email for fast help.</p>
-</div>
-
-<div class="card">
-<div class="card-pad">
-
-<p style="font-weight:800; font-size:1.05rem;">
-Need help fast? Most issues can be diagnosed quickly over a call.
-</p>
-
-<div class="contact-highlight">
-<strong>Let’s fix your IT issues</strong>
-<p>
-Email: <a href="mailto:berneb@bullycyber.com">berneb@bullycyber.com</a><br>
-Phone: <a href="tel:4079065796">407-906-5796</a>
-</p>
-</div>
-
-<div style="text-align:center; margin-top:20px;">
-<a class="btn btn-primary" href="tel:4079065796">Call for Fast Help</a>
-<a class="btn btn-ghost" href="mailto:berneb@bullycyber.com">Request Help by Email</a>
-</div>
-
-</div>
-</div>
-</section>
-
-</main>
-
-<footer>
-© <span id="year"></span> Bully Cyber Security
-</footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+    const contactForm = document.querySelector('form[action*="formspree.io"]');
+    if (contactForm) {
+      contactForm.addEventListener("submit", () => {
+        if (window.gtag) {
+          gtag("event", "form_submission", {
+            event_category: "lead",
+            event_label: "contact_form"
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
