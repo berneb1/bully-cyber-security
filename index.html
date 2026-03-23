@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bully Cyber Security | Professional IT & Security</title>
-    <meta name="description" content="Bully Cyber Security provides professional IT support, computer repair, and cybersecurity for small businesses and home offices in Central Florida." />
+    <meta name="description" content="Bully Cyber Security helps small businesses, home offices, and local residents keep their technology secure with practical IT support, email setup, and elite cybersecurity protection." />
     <link rel="icon" type="image/png" href="bcs-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <style>
         :root {
-            --dark-blue: #0d1b2a;
-            --navy: #1b263b;
-            --blue: #415a77;
-            --gold: #37e6d4; /* Your accent color */
+            --green: #12395b;
+            --green2: #1e5b8f;
+            --gold: #37e6d4;
             --text: #f4f8fc;
             --muted: #d0dceb;
             --border: rgba(255, 255, 255, 0.12);
-            --shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+            --shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+            --shadow2: 0 18px 52px rgba(30, 91, 143, 0.22);
             --container: 1120px;
             --radius: 24px;
         }
@@ -28,24 +28,22 @@
             margin: 0;
             font-family: "Inter", system-ui, -apple-system, sans-serif;
             color: var(--text);
-            background: linear-gradient(180deg, #18324e, #12263a 58%, #0d1b2a 100%);
+            background: radial-gradient(900px 420px at 50% 0%, rgba(30, 91, 143, 0.22), transparent 60%), linear-gradient(180deg, #18324e, #24486d 58%, #2c547d 100%);
             overflow-x: hidden;
         }
 
-        /* Subtle Noise Overlay */
         body::after {
             content: "";
             position: fixed;
             inset: 0;
             pointer-events: none;
             z-index: 0;
-            opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
         }
 
         .container { max-width: var(--container); margin: auto; padding: 2rem 1.25rem; position: relative; z-index: 1; }
 
-        /* Navigation */
         .nav {
             display: flex;
             justify-content: space-between;
@@ -55,64 +53,85 @@
             position: sticky;
             top: 0;
             z-index: 50;
-            background: rgba(20, 42, 66, 0.9);
+            background: rgba(20, 42, 66, 0.82);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
         }
 
         .brand { display: flex; gap: 0.75rem; align-items: center; text-decoration: none; color: inherit; }
-        .monogram { width: 55px; height: 55px; border-radius: 12px; overflow: hidden; }
+        .monogram { width: 65px; height: 65px; border-radius: 14px; overflow: hidden; flex-shrink: 0; box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
         .monogram img { width: 100%; height: 100%; object-fit: cover; }
-        .brand-copy strong { display: block; font-family: "Playfair Display", serif; font-size: 1.2rem; color: #fff; }
-        .brand-copy span { font-size: 0.8rem; color: var(--gold); font-weight: 600; display: block; }
+
+        .brand-copy strong { display: block; font-family: "Playfair Display", serif; font-size: 1.3rem; color: #fff; }
+        .brand-copy span { font-size: 0.85rem; color: var(--gold); font-weight: 700; display: block; }
 
         .nav-links { display: flex; gap: 0.5rem; }
-        .nav-links a { text-decoration: none; font-weight: 700; color: #eef7ff; padding: 0.5rem 1rem; border-radius: 999px; transition: 0.2s; font-size: 0.9rem; }
+        .nav-links a { text-decoration: none; font-weight: 800; color: #eef7ff; padding: 0.5rem 1rem; border-radius: 999px; transition: 0.2s; }
         .nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
-        .nav-links a.cta { background: var(--gold); color: #0d1b2a; }
+        .nav-links a.cta { background: var(--gold); color: var(--green); }
 
-        /* Hero Section */
         .hero { text-align: center; padding: 5rem 1rem 3rem; position: relative; }
-        .hero h1 { font-family: "Playfair Display", serif; font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.1; margin-bottom: 1.5rem; }
-        .hero p { max-width: 750px; margin: 0 auto 2rem; font-size: 1.1rem; color: var(--muted); line-height: 1.6; }
+        .hero h1 { font-family: "Playfair Display", serif; font-size: clamp(2.3rem, 6vw, 3.8rem); line-height: 1.1; margin-bottom: 1.5rem; }
+        .hero p { max-width: 750px; margin: 0 auto 2rem; font-size: 1.1rem; color: var(--muted); line-height: 1.7; font-weight: 500; }
 
         .trust-pills { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 2rem; }
         .trust-pill { background: rgba(55, 230, 212, 0.1); border: 1px solid var(--gold); color: var(--gold); padding: 8px 18px; border-radius: 999px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; }
 
-        /* Services Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
         .card { 
             background: rgba(255, 255, 255, 0.05); 
             border: 1px solid var(--border); 
             border-radius: var(--radius); 
-            padding: 2.5rem; 
+            padding: 2.2rem; 
             transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
         .card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.08); border-color: var(--gold); }
-        .card h3 { font-family: "Playfair Display", serif; color: #fff; margin-top: 0; font-size: 1.5rem; }
-        .card p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+        .card h3 { font-family: "Playfair Display", serif; color: var(--gold); margin-top: 0; font-size: 1.5rem; }
 
-        /* Buttons */
-        .btn { padding: 1rem 2.2rem; border-radius: 999px; font-weight: 800; text-decoration: none; transition: 0.3s; display: inline-block; font-size: 1rem; }
-        .btn-primary { background: var(--gold); color: #0d1b2a; box-shadow: 0 10px 30px rgba(55, 230, 212, 0.2); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 35px rgba(55, 230, 212, 0.3); }
+        .btn { padding: 1rem 2.2rem; border-radius: 999px; font-weight: 800; text-decoration: none; transition: 0.3s; display: inline-block; }
+        .btn-primary { background: var(--gold); color: var(--green); box-shadow: var(--shadow2); }
+        .btn-primary:hover { transform: scale(1.03); }
 
-        /* About Section */
-        .about-section { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 4rem; align-items: center; margin-top: 6rem; padding: 4rem 0; border-top: 1px solid var(--border); }
-        .headshot-frame { border-radius: 30px; overflow: hidden; border: 3px solid var(--gold); box-shadow: var(--shadow); position: relative; }
-        .headshot-frame img { width: 100%; display: block; filter: grayscale(20%); }
+        /* Headshot Circle Styling */
+        .headshot-wrap { display: flex; justify-content: center; align-items: center; padding: 1rem 0; }
+        .headshot-frame { 
+            width: 280px; 
+            height: 280px; 
+            border-radius: 50%; /* Makes it a circle */
+            padding: 6px; 
+            background: linear-gradient(135deg, var(--green2), var(--gold)); 
+            box-shadow: var(--shadow);
+            overflow: hidden; 
+        }
+        .headshot-frame img { 
+            width: 100%; 
+            height: 100%; 
+            border-radius: 50%; /* Ensures image is also circular */
+            object-fit: cover; 
+            border: 4px solid rgba(255,255,255,0.3);
+        }
 
-        .cert-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; }
-        .cert-tag { background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; color: #fff; border: 1px solid var(--border); }
+        .credential-stack { margin-top: 2rem; }
+        .credential-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem; }
+        .credential-item { 
+            padding: 1rem; 
+            border-radius: 14px; 
+            background: rgba(255, 255, 255, 0.08); 
+            border: 1px solid var(--border); 
+            color: #fff; 
+            font-size: 0.9rem;
+        }
+        .credential-item strong { display: block; color: var(--gold); margin-bottom: 3px; }
 
-        footer { text-align: center; padding: 4rem 1.25rem; color: var(--muted); font-size: 0.9rem; }
-        .mobile-call { position: fixed; bottom: 25px; right: 25px; background: var(--gold); color: #0d1b2a; padding: 16px 28px; border-radius: 999px; text-decoration: none; font-weight: 900; box-shadow: var(--shadow); z-index: 100; transition: 0.3s; }
-        .mobile-call:hover { transform: scale(1.05); }
+        .pill { font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 999px; background: rgba(255,255,255,0.15); border: 1px solid var(--border); color: #fff; margin: 2px; display: inline-block; }
+
+        footer { text-align: center; padding: 4rem; color: var(--muted); border-top: 1px solid var(--border); }
+        .mobile-call { position: fixed; bottom: 25px; right: 25px; background: var(--gold); color: var(--green); padding: 16px 28px; border-radius: 999px; text-decoration: none; font-weight: 900; box-shadow: var(--shadow); z-index: 100; }
 
         @media (max-width: 900px) {
-            .about-section { grid-template-columns: 1fr; text-align: center; }
-            .nav { flex-direction: column; gap: 1rem; padding: 1.5rem; }
-            .cert-stack { justify-content: center; }
+            .hero h1 { font-size: 2.2rem; }
+            .nav { flex-direction: column; gap: 1rem; }
         }
     </style>
 </head>
@@ -123,13 +142,13 @@
             <div class="monogram"><img src="bcs-logo.png" alt="Logo"></div>
             <div class="brand-copy">
                 <strong>Bully Cyber Security</strong>
-                <span>Professional IT & Security</span>
+                <span>Government-Trusted Professional IT</span>
             </div>
         </a>
         <div class="nav-links">
             <a href="#services">Services</a>
             <a href="#about">About</a>
-            <a href="#contact" class="cta">Free Consultation</a>
+            <a href="#contact" class="cta">Get Help</a>
         </div>
     </nav>
 
@@ -137,59 +156,86 @@
         <div class="trust-pills">
             <span class="trust-pill">Government-Trusted Professional</span>
             <span class="trust-pill">M.S. Cybersecurity</span>
-            <span class="trust-pill">Certified Expert</span>
+            <span class="trust-pill">Certified Expert: CISM, CISA, CASP+</span>
         </div>
-        <h1>Enterprise-Grade Security<br>For Your Local Business</h1>
-        <p>I bring years of experience protecting high-stakes federal and defense infrastructures to Central Florida. Get elite technical support and cybersecurity—simplified for you.</p>
+        <h1>Enterprise Security Simplified<br>for Small Business & Home</h1>
+        <p>Expert computer repair, business email setup, and elite-level cybersecurity for Central Florida. Serving Orlando, St. Cloud, Davenport, and Tampa.</p>
         <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Book Your Security Checkup</a>
+            <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+            <a href="tel:4079065796" class="btn" style="color:var(--gold); font-weight:800;">📞 407-906-5796</a>
         </div>
     </header>
 
     <main class="container">
+        
         <section id="services">
+            <h2 style="text-align:center; font-family:'Playfair Display'; font-size: 2.5rem;">Professional Services</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>🏠 Home Support</h3>
-                    <p>Fast computer repair, virus removal, and home network optimization. I ensure your personal technology is fast, reliable, and private.</p>
+                    <h3>💻 Technical Support</h3>
+                    <p>Fast computer repair, virus removal, and home network optimization. We fix slow systems and technical errors that stop your productivity.</p>
                 </div>
                 <div class="card">
-                    <h3>🏢 Small Business IT</h3>
-                    <p>Professional email setup, secure cloud migration, and ongoing IT support designed to keep your business running without interruption.</p>
+                    <h3>🏢 Business Solutions</h3>
+                    <p>Professional Microsoft 365 & Google Workspace setup. We handle business email, website setup, and WiFi networking for growth.</p>
                 </div>
                 <div class="card">
-                    <h3>🔐 Identity Defense</h3>
-                    <p>Advanced MFA setup and account hardening to protect your financial data and personal identity from modern cyber threats.</p>
+                    <h3>🛡️ Cybersecurity</h3>
+                    <p>Identity defense, ransomware protection, and security hardening. We provide the same rigor used in federal systems, tailored for you.</p>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about-section">
-            <div class="headshot-frame">
-                <img src="headshot.jpg" alt="Berne Bully Jr.">
-            </div>
-            <div>
-                <h2 style="font-family:'Playfair Display'; font-size: 2.2rem; margin-bottom: 1rem;">The Expert Behind the Defense</h2>
-                <p style="font-size: 1.1rem; color: var(--gold); font-weight: 700; margin-top: 0;">Berne Bully Jr., M.S. Cybersecurity</p>
-                <p>As a Senior Cybersecurity Engineer and ISSM, I have spent my career overseeing the security of some of the most sensitive infrastructures in the country. I founded <strong>Bully Cyber Security</strong> to bring that same level of rigor and integrity to my local community.</p>
-                <p>My goal is to eliminate the complexity of technology. Whether you are a local shop or a busy professional, I provide the expert-level defense you need with the personal service you expect.</p>
-                
-                <div class="cert-stack">
-                    <span class="cert-tag">CISM</span>
-                    <span class="cert-tag">CISA</span>
-                    <span class="cert-tag">CASP+</span>
-                    <span class="cert-tag">AWS Security</span>
-                    <span class="cert-tag">CySA+</span>
-                    <span class="cert-tag">PenTest+</span>
-                    <span class="cert-tag">Security+</span>
+        <section id="about" style="margin-top: 6rem; border-top: 1px solid var(--border); padding-top: 4rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                <div class="headshot-wrap">
+                    <div class="headshot-frame">
+                        <img src="headshot.jpg" alt="Berne Bully Jr.">
+                    </div>
                 </div>
-                <br>
-                <a href="https://www.linkedin.com/in/berne-bully" target="_blank" style="color:var(--gold); font-weight:800; text-decoration: none;">Follow on LinkedIn →</a>
+                <div>
+                    <h2 style="font-family:'Playfair Display'; font-size: 2.2rem; margin-bottom: 10px;">Meet Berne Bully Jr.</h2>
+                    <p style="color:var(--gold); font-weight:800; margin-top:0;">Founder & Senior Cybersecurity Engineer</p>
+                    <p>With an M.S. in Cybersecurity and years of experience as an Information Systems Security Manager (ISSM), I have spent my career securing some of the nation's most sensitive infrastructures. I founded Bully Cyber Security to bring that high-stakes expertise to the businesses and families of Central Florida.</p>
+                    <p>My approach is simple: elite-level technical skill combined with clear communication. No jargon, just results.</p>
+                    <a href="https://www.linkedin.com/in/berne-bully" target="_blank" style="color:var(--gold); font-weight:800; text-decoration:none;">View LinkedIn Profile →</a>
+                </div>
+            </div>
+
+            <div class="credential-stack">
+                <h3 style="font-family:'Playfair Display'; margin-bottom: 2rem;">Education & Certifications</h3>
+                <div class="credential-grid">
+                    <div class="credential-item">
+                        <strong>Master of Science</strong>
+                        Cybersecurity & Information Assurance<br>Western Governors University
+                    </div>
+                    <div class="credential-item">
+                        <strong>Bachelor of Science</strong>
+                        Information Technology Management<br>Clayton State University
+                    </div>
+                    <div class="credential-item">
+                        <strong>Executive Certifications</strong>
+                        CISM, CISA, CASP+
+                    </div>
+                    <div class="credential-item">
+                        <strong>Cloud & Security</strong>
+                        AWS Security Specialty, CySA+, PenTest+, Security+
+                    </div>
+                    <div class="credential-item">
+                        <strong>Microsoft Certified</strong>
+                        AZ-500, SC-200, SC-900
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 2rem; background: rgba(255,255,255,0.03); border-radius: 14px;">
+                <h4 style="margin-top:0;">Technical Proficiencies</h4>
+                <span class="pill">NIST 800-53</span> <span class="pill">RMF</span> <span class="pill">Splunk</span> <span class="pill">Nessus</span> <span class="pill">AWS Security</span> <span class="pill">Azure Sentinel</span> <span class="pill">Ethical Hacking</span> <span class="pill">Vulnerability Management</span> <span class="pill">Windows Server</span> <span class="pill">Linux</span> <span class="pill">Python</span>
             </div>
         </section>
 
-        <section id="contact" style="text-align:center; margin-top: 4rem; padding: 5rem 1rem; background: rgba(255,255,255,0.03); border-radius: var(--radius); border: 1px solid var(--border);">
-            <h2 style="font-family:'Playfair Display'; font-size: 2.5rem; margin-bottom: 1rem;">Ready to Secure Your Technology?</h2>
+        <section id="contact" style="text-align:center; margin-top: 6rem; padding: 5rem 1rem; background: rgba(55, 230, 212, 0.05); border-radius: var(--radius); border: 1px solid var(--border);">
+            <h2 style="font-family:'Playfair Display'; font-size: 2.5rem;">Ready to Secure Your Technology?</h2>
             <p style="margin-bottom: 2.5rem; color: var(--muted);">Direct, professional support is just a call or email away.</p>
             <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
                 <a href="tel:4079065796" class="btn btn-primary">📞 Call 407-906-5796</a>
