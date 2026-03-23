@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bully Cyber Security | Expert Engineering & IT</title>
+    <title>Bully Cyber Security | Senior Engineering & IT</title>
     <link rel="icon" type="image/png" href="bcs-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,7 +29,7 @@
 
         .container { max-width: 1200px; margin: auto; padding: 0 2rem; }
 
-        /* --- NAV: MASSIVE EDGE-TO-EDGE LOGO --- */
+        /* --- NAV: EDGE-TO-EDGE LOGO --- */
         .nav {
             padding: 1rem 0;
             background: rgba(6, 13, 26, 0.95);
@@ -47,25 +47,24 @@
             background: #fff;
             display: flex; align-items: center; justify-content: center;
             flex-shrink: 0;
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
         }
-        /* FIT LOGO EXACTLY - NO EXTRA SPACE */
-        .logo-circle img { width: 100%; height: 100%; object-fit: cover; }
+        .logo-circle img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.05); }
 
         .brand-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.8rem; line-height: 1; margin-left: 20px;}
         .brand-text span { font-size: 0.8rem; color: var(--cyber-blue); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-left: 20px;}
 
         /* --- HERO --- */
-        .hero { padding: 10rem 0 6rem; text-align: center; }
+        .hero { padding: 8rem 0 6rem; text-align: center; }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 8vw, 4.8rem); font-weight: 800; margin-bottom: 1.5rem; }
-        .hero p { font-size: 1.3rem; color: var(--text-slate); max-width: 800px; margin: 0 auto 3rem; }
+        .hero p { font-size: 1.3rem; color: var(--text-slate); max-width: 850px; margin: 0 auto 3rem; }
 
-        /* --- SERVICES (WITH BRIEF EXPLANATIONS) --- */
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 6rem; }
-        .card { background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 3rem 2rem; border-radius: 30px; }
-        .card h3 { color: var(--cyber-blue); font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1rem; }
-        .card p { font-size: 0.95rem; color: var(--text-slate); }
-        .card ul { margin-top: 1rem; list-style: none; font-size: 0.85rem; font-weight: 600; }
+        /* --- SERVICES --- */
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 6rem; }
+        .card { background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 2.5rem 1.5rem; border-radius: 30px; transition: 0.3s; }
+        .card:hover { border-color: var(--cyber-blue); transform: translateY(-5px); }
+        .card h3 { color: var(--cyber-blue); font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem; }
+        .card p { font-size: 0.9rem; color: var(--text-slate); margin-bottom: 1rem; }
+        .card ul { list-style: none; font-size: 0.8rem; font-weight: 600; }
         .card li { border-left: 2px solid var(--cyber-blue); padding-left: 10px; margin-bottom: 8px; }
 
         /* --- FOUNDER & CREDENTIALS --- */
@@ -74,22 +73,23 @@
         .headshot-frame { width: 100%; aspect-ratio: 1/1; border-radius: 20px; border: 4px solid var(--cyber-blue); overflow: hidden; }
         .headshot-frame img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* STAND OUT CREDENTIALS */
         .cred-block { margin-top: 2rem; padding: 2rem; background: #0a192f; border-radius: 20px; border-left: 4px solid var(--cyber-blue); }
         .cred-header { color: var(--cyber-blue); text-transform: uppercase; font-weight: 900; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 15px; }
+        
         .degree-item { margin-bottom: 15px; }
         .degree-name { font-weight: 700; font-size: 1.1rem; display: block; }
-        .school-name { font-size: 0.9rem; color: var(--text-slate); font-style: italic; }
+        .school-name { font-size: 0.85rem; color: var(--text-slate); font-style: italic; }
 
-        .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
-        .cert-tag { background: rgba(0, 212, 255, 0.1); border: 1px solid var(--cyber-blue); padding: 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-align: center; }
+        .cert-category { margin-bottom: 1.5rem; }
+        .category-name { font-size: 0.75rem; color: var(--cyber-blue); font-weight: 900; text-transform: uppercase; margin-bottom: 8px; display: block; }
+        .cert-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+        .cert-tag { background: rgba(0, 212, 255, 0.1); border: 1px solid var(--cyber-blue); padding: 6px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; }
 
         /* --- RATES --- */
         .pricing { max-width: 900px; margin: 0 auto 6rem; background: #000; padding: 4rem; border-radius: 40px; border: 1px solid var(--border); }
         .price-row { display: flex; justify-content: space-between; padding: 1.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .price-value { color: var(--cyber-blue); font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 800; }
 
-        /* --- BUTTONS --- */
         .btn { padding: 1.2rem 2.5rem; border-radius: 12px; font-weight: 800; text-decoration: none; display: inline-block; transition: 0.3s; cursor: pointer; border: none; }
         .btn-primary { background: var(--cyber-blue); color: var(--navy-deep); }
         .btn-outline { border: 2px solid var(--cyber-blue); color: var(--cyber-blue); background: transparent; }
@@ -118,7 +118,7 @@
 
     <header class="container hero">
         <h1>The Expert Alternative to <span style="color:var(--cyber-blue)">Retail Support.</span></h1>
-        <p>Skip the trainees. Get your technology fixed, built, and secured by a Senior Cybersecurity Engineer with a Master's degree and a decade of field experience.</p>
+        <p>I am a Senior Cybersecurity Engineer and full-stack veteran serving the Florida community. I provide elite computer repair, secure business websites, and enterprise-grade cloud defense.</p>
         <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
             <a href="tel:4079065796" class="btn btn-primary">Book Repair: 407.906.5796</a>
             <a href="https://www.linkedin.com/in/berne-bully" class="btn btn-outline" target="_blank">LinkedIn Profile</a>
@@ -130,29 +130,34 @@
         <section class="services">
             <div class="card">
                 <h3>💻 Expert Repair</h3>
-                <p>I diagnose and resolve hardware and software failures that retail shops often miss.</p>
+                <p>Advanced hardware diagnostics and performance optimization fixed right the first time.</p>
                 <ul>
-                    <li>Advanced Diagnostics</li>
-                    <li>Data Recovery & Transfer</li>
-                    <li>System Performance Optimization</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>🌐 Business Websites</h3>
-                <p>I build secure, modern websites designed to load fast and capture local Florida leads.</p>
-                <ul>
-                    <li>Custom Responsive Design</li>
-                    <li>Hardened Security Back-end</li>
-                    <li>Local SEO Optimization</li>
+                    <li>Component-Level Repair</li>
+                    <li>Advanced Data Recovery</li>
                 </ul>
             </div>
             <div class="card">
                 <h3>🛡️ Cybersecurity</h3>
-                <p>I apply government-level defense strategies to protect your home and business data.</p>
+                <p>Government-level defense strategies to protect your home and business from modern threats.</p>
                 <ul>
-                    <li>Malware & Ransomware Removal</li>
+                    <li>Neutralizing Ransomware</li>
                     <li>Network & Router Hardening</li>
-                    <li>Automated Secure Backups</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>☁️ Cloud Security</h3>
+                <p>Expert migration and security hardening for AWS and Microsoft Azure cloud environments.</p>
+                <ul>
+                    <li>Secure Cloud Migration</li>
+                    <li>Identity (MFA) Enforcement</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🌐 Business Websites</h3>
+                <p>Secure, modern websites built to load fast and capture local Florida leads.</p>
+                <ul>
+                    <li>Custom Secure Design</li>
+                    <li>Local SEO Optimization</li>
                 </ul>
             </div>
         </section>
@@ -165,32 +170,48 @@
                     <div class="cred-header">Academic Excellence</div>
                     <div class="degree-item">
                         <span class="degree-name">M.S. Cybersecurity</span>
-                        <span class="school-name">Florida International University</span>
+                        <span class="school-name">Western Governors University</span>
                     </div>
                     <div class="degree-item">
                         <span class="degree-name">B.S. Information Technology</span>
-                        <span class="school-name">Florida International University</span>
+                        <span class="school-name">Clayton State University</span>
                     </div>
                     <div class="degree-item">
                         <span class="degree-name">A.S. Business Management</span>
-                        <span class="school-name">Valencia College</span>
+                        <span class="school-name">Southern Crescent Technical College</span>
                     </div>
                 </div>
             </div>
             <div>
                 <h2 style="font-family:'Playfair Display'; font-size: 3.2rem; margin-bottom: 1rem;">Berne Bully Jr., M.S.</h2>
-                <p style="color:var(--cyber-blue); font-weight:800; text-transform:uppercase; letter-spacing:3px; margin-bottom:1.5rem;">Senior Cyber Security Engineer • Founder</p>
+                <p style="color:var(--cyber-blue); font-weight:800; text-transform:uppercase; letter-spacing:3px; margin-bottom:1.5rem;">Senior Cybersecurity Engineer • Founder</p>
                 <p>I founded Bully Cyber Security to offer a premium, engineer-led alternative to impersonal retail tech support. With experience spanning <strong>Government and Commercial sectors</strong>, I have worked across the entire IT lifecycle—from <strong>Helpdesk</strong> and <strong>Systems Administration</strong> to <strong>Senior Management</strong>.</p>
                 
                 <div class="cred-block" style="margin-top:2rem;">
                     <div class="cred-header">Industry Certifications</div>
-                    <div class="cert-grid">
-                        <div class="cert-tag">CISM (Management)</div>
-                        <div class="cert-tag">CISA (Auditing)</div>
-                        <div class="cert-tag">CASP+ (Advanced)</div>
-                        <div class="cert-tag">AWS Security Expert</div>
-                        <div class="cert-tag">CompTIA Security+</div>
-                        <div class="cert-tag">CompTIA Network+</div>
+                    
+                    <div class="cert-category">
+                        <span class="category-name">Management & Audit</span>
+                        <div class="cert-grid">
+                            <span class="cert-tag">CISM</span> <span class="cert-tag">CISA</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-category">
+                        <span class="category-name">Cloud & Infrastructure</span>
+                        <div class="cert-grid">
+                            <span class="cert-tag">AWS Security Specialty</span>
+                            <span class="cert-tag">Microsoft AZ-500</span>
+                            <span class="cert-tag">SC-200</span> <span class="cert-tag">SC-900</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-category">
+                        <span class="category-name">Advanced Operations</span>
+                        <div class="cert-grid">
+                            <span class="cert-tag">CASP+</span> <span class="cert-tag">CySA+</span>
+                            <span class="cert-tag">PenTest+</span> <span class="cert-tag">Security+</span>
+                        </div>
                     </div>
                 </div>
             </div>
