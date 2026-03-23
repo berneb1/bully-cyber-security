@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bully Cyber Security | Senior Engineering & IT Support</title>
-    <meta name="description" content="Senior Cyber Security Engineer and Cybersecurity Manager providing expert IT support and security for small businesses and homes." />
+    <title>Bully Cyber Security | Expert Computer Repair & Security</title>
+    <meta name="description" content="Professional IT support, computer repair, and cybersecurity for small businesses and homes. The expert alternative to retail tech squads." />
     <link rel="icon" type="image/png" href="bcs-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +14,7 @@
             --bg-deep: #0b1421;
             --bg-gradient: linear-gradient(180deg, #0b1421 0%, #152b47 100%);
             --panel: rgba(255, 255, 255, 0.04);
-            --accent: #37e6d4; /* Signature Teal */
+            --accent: #37e6d4; 
             --linkedin: #0077b5;
             --text-main: #ffffff;
             --text-dim: #d1d5db;
@@ -30,91 +30,84 @@
             background: var(--bg-gradient);
             color: var(--text-main);
             line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Subtle Grain Overlay */
-        body::before {
-            content: ""; position: fixed; inset: 0; pointer-events: none; opacity: 0.02; z-index: 10;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
         }
 
         .container { max-width: 1100px; margin: auto; padding: 2rem 1.25rem; position: relative; z-index: 2; }
 
-        /* Nav */
+        /* Nav - Enhanced Logo Size */
         .nav {
             display: flex; justify-content: space-between; align-items: center;
             padding: 1rem 5%; position: sticky; top: 0; z-index: 1000;
-            background: rgba(11, 20, 33, 0.9); backdrop-filter: blur(15px);
+            background: rgba(11, 20, 33, 0.95); backdrop-filter: blur(15px);
             border-bottom: 1px solid var(--border);
         }
-        .brand { display: flex; align-items: center; gap: 15px; text-decoration: none; color: white; }
+        .brand { display: flex; align-items: center; gap: 20px; text-decoration: none; color: white; }
         
-        /* Logo Circle Fix */
+        /* LARGER LOGO SETUP */
         .logo-circle { 
-            width: 48px; height: 48px; border: 2px solid var(--accent); 
+            width: 70px; height: 70px; border: 3px solid var(--accent); 
             border-radius: 50%; overflow: hidden; background: #000;
             display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 15px rgba(55, 230, 212, 0.3);
         }
-        .logo-circle img { width: 80%; height: 80%; object-fit: contain; }
+        .logo-circle img { width: 85%; height: 85%; object-fit: contain; }
 
-        .brand-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.15rem; line-height: 1.2; }
-        .brand-text span { font-size: 0.65rem; color: var(--accent); font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
+        .brand-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.4rem; line-height: 1.1; }
+        .brand-text span { font-size: 0.75rem; color: var(--accent); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
 
         /* Hero */
-        .hero { padding: 7rem 1rem 4rem; text-align: center; max-width: 900px; margin: auto; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 6vw, 3.8rem); margin-bottom: 1.2rem; line-height: 1.1; }
-        .hero p { font-size: 1.2rem; color: var(--text-dim); margin-bottom: 2.5rem; max-width: 750px; margin-left: auto; margin-right: auto; }
+        .hero { padding: 8rem 1rem 5rem; text-align: center; max-width: 950px; margin: auto; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 7vw, 4.2rem); margin-bottom: 1.5rem; line-height: 1.1; }
+        .hero p { font-size: 1.25rem; color: var(--text-dim); margin-bottom: 3rem; max-width: 800px; margin-inline: auto; }
 
-        /* Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+        /* Grid Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
         .card { 
             background: var(--panel); border: 1px solid var(--border); 
-            padding: 2.5rem; border-radius: 24px; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            padding: 3rem 2rem; border-radius: 28px; transition: 0.4s;
         }
-        .card:hover { border-color: var(--accent); transform: translateY(-8px); background: rgba(255,255,255,0.07); }
-        .card h3 { color: var(--accent); font-family: 'Playfair Display', serif; margin-top: 0; font-size: 1.5rem; }
+        .card:hover { border-color: var(--accent); transform: translateY(-10px); background: rgba(255,255,255,0.08); }
+        .card h3 { color: var(--accent); font-family: 'Playfair Display', serif; margin-top: 0; font-size: 1.6rem; margin-bottom: 1rem; }
 
-        /* About / Founder - Circular Image Fix */
+        /* About / Headshot Fix */
         .about-wrap {
-            display: grid; grid-template-columns: 320px 1fr; gap: 60px;
+            display: grid; grid-template-columns: 340px 1fr; gap: 60px;
             margin: 8rem 0; align-items: center;
         }
         .headshot-frame { 
-            width: 320px; height: 320px; border-radius: 50%; 
-            border: 4px solid var(--accent); overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            width: 340px; height: 340px; border-radius: 50%; 
+            border: 5px solid var(--accent); overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
         .headshot-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 
         /* Pricing Box */
-        .price-box { max-width: 850px; margin: 5rem auto; background: rgba(0,0,0,0.25); padding: 3rem; border-radius: 32px; border: 1px solid var(--border); }
-        .price-item { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-weight: 600; }
-        .price-value { color: var(--accent); font-family: 'Playfair Display', serif; font-size: 1.2rem; }
-
-        /* Who We Help List */
-        .help-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 2rem; }
-        .help-tag { background: rgba(255,255,255,0.05); padding: 12px 18px; border-radius: 12px; border: 1px solid var(--border); font-size: 0.9rem; font-weight: 700; text-align: center; }
+        .price-box { max-width: 850px; margin: 5rem auto; background: rgba(0,0,0,0.3); padding: 3rem; border-radius: 35px; border: 1px solid var(--border); }
+        .price-item { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-weight: 600; }
+        .price-value { color: var(--accent); font-family: 'Playfair Display', serif; font-size: 1.3rem; }
 
         /* Buttons */
-        .btn { padding: 16px 34px; border-radius: 12px; font-weight: 800; text-decoration: none; display: inline-block; transition: 0.3s; cursor: pointer; border: none; }
-        .btn-primary { background: var(--accent); color: #0b1421; box-shadow: 0 10px 20px rgba(55, 230, 212, 0.2); }
-        .btn-outline { border: 1px solid var(--accent); color: var(--accent); background: transparent; }
-        .btn-li { background: var(--linkedin); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; padding: 10px 20px; border-radius: 8px; }
+        .btn { padding: 18px 38px; border-radius: 14px; font-weight: 800; text-decoration: none; display: inline-block; transition: 0.3s; border: none; font-size: 1rem; }
+        .btn-primary { background: var(--accent); color: #0b1421; box-shadow: 0 10px 25px rgba(55, 230, 212, 0.25); }
+        .btn-outline { border: 2px solid var(--accent); color: var(--accent); background: transparent; }
+        
+        /* LinkedIn Styling */
+        .btn-li { color: var(--linkedin); text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 6px; font-size: 0.95rem; transition: 0.2s; }
+        .btn-li:hover { filter: brightness(1.2); }
 
         /* Floating Call Button */
         .mobile-call {
-            position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
-            background: var(--accent); color: #0b1421; padding: 16px 32px;
-            border-radius: 50px; font-weight: 900; text-decoration: none;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5); z-index: 2000; display: none;
-            white-space: nowrap; border: 2px solid rgba(255,255,255,0.2);
+            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+            background: var(--accent); color: #0b1421; padding: 18px 36px;
+            border-radius: 60px; font-weight: 900; text-decoration: none;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6); z-index: 2000; display: none;
+            border: 2px solid white;
         }
 
-        footer { text-align: center; padding: 5rem 1rem; color: var(--text-dim); border-top: 1px solid var(--border); }
+        footer { text-align: center; padding: 6rem 1rem; color: var(--text-dim); border-top: 1px solid var(--border); }
         
         @media (max-width: 900px) {
-            .about-wrap { grid-template-columns: 1fr; text-align: center; justify-items: center; gap: 40px; }
+            .about-wrap { grid-template-columns: 1fr; text-align: center; justify-items: center; }
             .mobile-call { display: block; }
             .nav-links { display: none; }
         }
@@ -127,58 +120,44 @@
             <div class="logo-circle"><img src="bcs-logo.png" alt="BCS"></div>
             <div class="brand-text">
                 <strong>Bully Cyber Security</strong>
-                <span>Senior Engineering & Defense</span>
+                <span>Expert Computer Repair & Security</span>
             </div>
         </a>
-        <div class="nav-links">
+        <div class="nav-links" style="display:flex; align-items:center; gap:30px;">
             <a href="https://www.linkedin.com/in/berne-bully" target="_blank" class="btn-li">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 14.867 0 14.234V1.146zM4.943 12.248V6.169H3.042v6.079h1.901zm-1.057-6.891c.646 0 1.05-.429 1.05-.965-.011-.548-.404-.965-1.037-.965-.632 0-1.051.417-1.051.965 0 .536.406.965 1.026.965h.012zM12.248 12.248V8.855c0-1.817-.966-2.663-2.265-2.663-1.047 0-1.517.576-1.779.991h.012v-.827H6.315c.025.536 0 6.079 0 6.079h1.902V9.062c0-.17.012-.341.062-.463.137-.341.449-.694.974-.694.688 0 .963.524.963 1.293v3.05h1.902z"/></svg>
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 14.867 0 14.234V1.146zM4.943 12.248V6.169H3.042v6.079h1.901zm-1.057-6.891c.646 0 1.05-.429 1.05-.965-.011-.548-.404-.965-1.037-.965-.632 0-1.051.417-1.051.965 0 .536.406.965 1.026.965h.012zM12.248 12.248V8.855c0-1.817-.966-2.663-2.265-2.663-1.047 0-1.517.576-1.779.991h.012v-.827H6.315c.025.536 0 6.079 0 6.079h1.902V9.062c0-.17.012-.341.062-.463.137-.341.449-.694.974-.694.688 0 .963.524.963 1.293v3.05h1.902z"/></svg>
                 LinkedIn
             </a>
-            <a href="#contact" class="btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">Request Service</a>
+            <a href="#contact" class="btn-primary" style="padding: 12px 24px; border-radius: 8px;">Schedule Now</a>
         </div>
     </nav>
 
     <header class="hero">
-        <div style="color:var(--accent); font-weight:800; letter-spacing:2px; text-transform:uppercase; font-size:0.8rem; margin-bottom:1rem;">Elite IT Solutions</div>
-        <h1>High-End Engineering.<br>Simple to Understand.</h1>
-        <p>I provide senior-level IT support, computer repair, and cybersecurity management for small businesses and residents across Central Florida. Professional help with zero jargon.</p>
-        <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+        <div style="color:var(--accent); font-weight:800; letter-spacing:3px; text-transform:uppercase; font-size:0.9rem; margin-bottom:1rem;">Professional Tech Support</div>
+        <h1>The Expert Alternative to <br><span style="color:var(--accent)">Retail Tech Squads.</span></h1>
+        <p>Expert computer repair, professional IT support, and advanced cybersecurity for small businesses and homes. Senior-level fixes with personal service.</p>
+        <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
             <a href="tel:4079065796" class="btn btn-primary">Call 407.906.5796</a>
-            <a href="#services" class="btn btn-outline">Explore Services</a>
+            <a href="#services" class="btn btn-outline">See All Services</a>
         </div>
     </header>
 
     <main class="container">
         
         <section id="services">
-            <h2 style="text-align:center; font-family:'Playfair Display'; font-size:2.5rem; margin-bottom:1rem;">What I Do</h2>
-            <p style="text-align:center; color:var(--text-dim); margin-bottom:3rem; max-width:600px; margin-inline:auto;">Combining a decade of engineering experience with a commitment to simple, honest service.</p>
             <div class="grid">
                 <div class="card">
-                    <h3>💻 Expert Tech Support</h3>
-                    <p>Troubleshooting for slow computers, hardware failure, new device setups, and software errors. I fix it right the first time.</p>
+                    <h3>💻 Expert Repair</h3>
+                    <p>Fast fixes for slow PCs, hardware failures, cracked screens, and new device setups. Better service than the big-box stores, guaranteed.</p>
                 </div>
                 <div class="card">
-                    <h3>🌐 Business Systems</h3>
-                    <p>Professional Microsoft 365/Google Workspace setup, secure office networking, and basic business website deployment.</p>
+                    <h3>🏢 Business IT</h3>
+                    <p>Professional email (Microsoft 365), secure networking, and website setup. I act as your on-call IT manager so you can focus on work.</p>
                 </div>
                 <div class="card">
-                    <h3>🛡️ Cyber Defense</h3>
-                    <p>Advanced virus/malware removal, security hardening, and secure backup solutions to keep your data safe from threats.</p>
+                    <h3>🛡️ Security First</h3>
+                    <p>Advanced virus removal, identity protection, and automated backups. I protect your data using enterprise-grade security standards.</p>
                 </div>
-            </div>
-        </section>
-
-        <section style="margin-top: 6rem;">
-            <h2 style="text-align:center; font-family:'Playfair Display';">Who I Serve</h2>
-            <div class="help-grid">
-                <div class="help-tag">Law Firms & Offices</div>
-                <div class="help-tag">Medical Practices</div>
-                <div class="help-tag">Local Restaurants</div>
-                <div class="help-tag">Home Offices</div>
-                <div class="help-tag">Residential Clients</div>
-                <div class="help-tag">Growing Startups</div>
             </div>
         </section>
 
@@ -187,39 +166,38 @@
                 <img src="headshot.jpg" alt="Berne Bully Jr.">
             </div>
             <div>
-                <h2 style="font-family:'Playfair Display'; font-size:2.5rem; margin-top:0; margin-bottom:0.5rem;">Berne Bully Jr., M.S.</h2>
+                <h2 style="font-family:'Playfair Display'; font-size:2.8rem; margin-top:0; margin-bottom:0.5rem;">Berne Bully Jr., M.S.</h2>
                 <p style="color:var(--accent); font-weight:800; text-transform:uppercase; letter-spacing:1px; margin-bottom:1.5rem;">Senior Cyber Security Engineer & Cybersecurity Manager</p>
-                <p>Technology should be an asset, not a frustration. I founded Bully Cyber Security to offer businesses and individuals a premium alternative to retail tech squads. I bring high-level engineering standards to your home or office, ensuring your systems are fast, reliable, and secure.</p>
-                <p>With a **Master’s Degree in Cybersecurity** and multiple lead engineering roles, I focus on clear communication. I don't just solve the immediate problem; I identify risks and provide a roadmap to keep your digital life protected for the long term.</p>
+                <p>You shouldn't have to wait in line at a mall to get professional tech help. I founded Bully Cyber Security to provide my neighbors and local business owners with a **direct line to a Senior Engineer.**</p>
+                <p>With a **Master’s Degree in Cybersecurity** and over a decade of experience managing complex systems, I provide a level of expertise that retail technicians simply can't match. Whether you have a slow computer at home or a growing business that needs a secure network, I ensure your technology is fast, reliable, and—most importantly—private.</p>
                 
-                <div style="margin-top: 2rem; display:flex; flex-wrap:wrap; gap:10px;">
-                    <span style="background: rgba(255,255,255,0.06); padding: 6px 14px; border-radius: 6px; font-size: 0.75rem; border: 1px solid var(--border); font-weight: 600;">M.S. Cybersecurity</span>
-                    <span style="background: rgba(255,255,255,0.06); padding: 6px 14px; border-radius: 6px; font-size: 0.75rem; border: 1px solid var(--border); font-weight: 600;">CISM & CISA</span>
-                    <span style="background: rgba(255,255,255,0.06); padding: 6px 14px; border-radius: 6px; font-size: 0.75rem; border: 1px solid var(--border); font-weight: 600;">AWS Security Specialist</span>
-                    <span style="background: rgba(255,255,255,0.06); padding: 6px 14px; border-radius: 6px; font-size: 0.75rem; border: 1px solid var(--border); font-weight: 600;">CASP+ Certified</span>
+                <div style="margin-top: 2rem; display:flex; flex-wrap:wrap; gap:12px;">
+                    <span style="background: rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 8px; font-size: 0.8rem; border: 1px solid var(--border); font-weight: 700;">M.S. Cybersecurity</span>
+                    <span style="background: rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 8px; font-size: 0.8rem; border: 1px solid var(--border); font-weight: 700;">Certified CISM & CISA</span>
+                    <span style="background: rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 8px; font-size: 0.8rem; border: 1px solid var(--border); font-weight: 700;">AWS Security Specialist</span>
                 </div>
             </div>
         </section>
 
         <section id="pricing">
             <div class="price-box">
-                <h2 style="text-align:center; font-family:'Playfair Display'; margin-top:0; margin-bottom:2rem;">Flat-Rate Starting Prices</h2>
-                <div class="price-item"><span>Computer & In-Home Tech Repair</span><span class="price-value">$99</span></div>
+                <h2 style="text-align:center; font-family:'Playfair Display'; margin-top:0; margin-bottom:2rem;">Upfront, Honest Pricing</h2>
+                <div class="price-item"><span>Computer & Home Tech Repair</span><span class="price-value">$99</span></div>
                 <div class="price-item"><span>Virus & Malware Neutralization</span><span class="price-value">$129</span></div>
-                <div class="price-item"><span>New Device / Computer Setup</span><span class="price-value">$129</span></div>
-                <div class="price-item"><span>Professional Business Email Setup</span><span class="price-value">$129</span></div>
+                <div class="price-item"><span>New Computer / Device Setup</span><span class="price-value">$129</span></div>
+                <div class="price-item"><span>Business Email Setup (Microsoft 365)</span><span class="price-value">$129</span></div>
                 <div class="price-item"><span>WiFi & Network Optimization</span><span class="price-value">$149</span></div>
                 <div class="price-item"><span>Business Website Deployment</span><span class="price-value">$199</span></div>
-                <div class="price-item"><span>Security Checkup & Hardening</span><span class="price-value">$149+</span></div>
-                <div class="price-item" style="border:none;"><span>Small Business IT Support</span><span class="price-value">$99/hr</span></div>
-                <p style="text-align:center; font-size:0.85rem; color:var(--text-dim); margin-top:2.5rem; opacity:0.8;">Final pricing determined by device count and complexity. No hidden fees.</p>
+                <div class="price-item"><span>Security Audit & Hardening</span><span class="price-value">$149+</span></div>
+                <div class="price-item" style="border:none;"><span>Small Business Managed IT</span><span class="price-value">$99/hr</span></div>
+                <p style="text-align:center; font-size:0.9rem; color:var(--text-dim); margin-top:2.5rem;">All work performed by a Master's level Engineer. No hidden store fees.</p>
             </div>
         </section>
 
-        <section id="contact" style="text-align:center; padding: 6rem 1rem;">
-            <h2 style="font-family:'Playfair Display'; font-size:3rem; margin-bottom:1rem;">Ready for Peace of Mind?</h2>
-            <p style="max-width: 600px; margin-inline:auto; margin-bottom:3rem;">Call today to schedule a service or a free 15-minute consultation to discuss your business security needs.</p>
-            <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+        <section id="contact" style="text-align:center; padding: 5rem 1rem;">
+            <h2 style="font-family:'Playfair Display'; font-size:3.2rem; margin-bottom:1rem;">Skip the Line. Call the Expert.</h2>
+            <p style="max-width: 650px; margin-inline:auto; margin-bottom:3rem; font-size: 1.1rem;">Serving Orlando, St. Cloud, Tampa, Davenport, and surrounding areas. Get your technology fixed right the first time.</p>
+            <div style="display:flex; justify-content:center; gap:25px; flex-wrap:wrap;">
                 <a href="tel:4079065796" class="btn btn-primary">Call 407.906.5796</a>
                 <a href="mailto:berneb@bullycyber.com" class="btn btn-outline">Email Berne Directly</a>
             </div>
@@ -228,8 +206,10 @@
     </main>
 
     <footer>
-        <p>© <span id="year"></span> Bully Cyber Security. Registered & Insured Professional Support.</p>
-        <p style="font-size:0.8rem; opacity: 0.6;">Serving Orlando • St. Cloud • Tampa • Davenport • Poinciana</p>
+        <p>© <span id="year"></span> Bully Cyber Security. Registered, Insured, and Expertly Led.</p>
+        <div style="margin-top: 20px;">
+            <a href="https://www.linkedin.com/in/berne-bully" target="_blank" style="color:white; font-weight:700;">Connect on LinkedIn</a>
+        </div>
     </footer>
 
     <a href="tel:4079065796" class="mobile-call">📞 Call Now: 407.906.5796</a>
