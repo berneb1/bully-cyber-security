@@ -666,26 +666,6 @@
       margin-top: 1rem;
     }
 
-    .mobile-call {
-      position: fixed;
-      bottom: calc(18px + env(safe-area-inset-bottom, 0px));
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, #1e5b8f, #2b78b9);
-      color: white;
-      font-weight: 800;
-      padding: 14px 26px;
-      border-radius: 999px;
-      text-decoration: none;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-      z-index: 999;
-      white-space: nowrap;
-    }
-
-    .mobile-call:hover {
-      background: #174b74;
-    }
-
     .headshot-wrap {
       display: flex;
       justify-content: center;
@@ -873,11 +853,6 @@
       .contact-strip {
         padding: 0.9rem;
       }
-
-      .mobile-call {
-        padding: 12px 20px;
-        font-size: 0.95rem;
-      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -930,12 +905,9 @@
 
     <div class="hero-card">
       <div class="hero-chips">
-        <div class="hero-chip">🛡️ Senior Cybersecurity Leadership</div>
-        <div class="hero-chip">🏢 Commercial Experience</div>
-        <div class="hero-chip">🏛️ Government Experience</div>
-        <div class="hero-chip">☁️ Microsoft 365 &amp; Cloud Support</div>
-        <div class="hero-chip">📶 WiFi &amp; Network Help</div>
-        <div class="hero-chip">🆓 Free 15-Minute Security Checkup</div>
+        <div class="hero-chip">Cybersecurity expertise</div>
+        <div class="hero-chip">Practical IT support</div>
+        <div class="hero-chip">Free 15-minute checkup</div>
       </div>
     </div>
 
@@ -1385,8 +1357,6 @@
     © <span id="year"></span> Bully Cyber Security •
     <a href="https://www.linkedin.com/in/berne-bully" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   </footer>
-
-  <a class="mobile-call" href="tel:4079065796" aria-label="Call Bully Cyber Security">📞 Call Now</a>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
