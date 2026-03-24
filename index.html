@@ -633,13 +633,17 @@
     }
 
     .audience-card h3,
-    .value-card h3 {
+    .value-card h3,
+    .proof-card h3,
+    .choose-card h3 {
       margin: 0;
       color: #ffffff;
       font-size: 1.15rem;
     }
 
-    .value-card {
+    .value-card,
+    .proof-card,
+    .choose-card {
       min-height: 100%;
     }
 
@@ -725,6 +729,27 @@
       margin-top: 0.25rem;
       color: #4f6780;
       font-weight: 700;
+    }
+
+    .proof-list {
+      margin: 0.8rem 0 0;
+      padding-left: 1rem;
+      color: #eef7ff;
+      line-height: 1.7;
+      font-weight: 600;
+    }
+
+    .proof-list li + li {
+      margin-top: 0.3rem;
+    }
+
+    .relationship-note {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+      color: #eef7ff;
+      font-weight: 600;
+      line-height: 1.8;
     }
 
     .contact-highlight {
@@ -1114,6 +1139,42 @@
   </section>
 
   <main class="container" id="main-content">
+    <section class="block">
+      <div class="section-head">
+        <h2>Why Clients Choose Bully Cyber Security</h2>
+        <p>Built to earn trust with clear service, direct communication, and practical help instead of generic big-box support.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card col-4 choose-card">
+          <div class="card-pad">
+            <h3>Direct Support</h3>
+            <p class="story-p">
+              Work directly with an experienced cybersecurity professional instead of being routed through a call-center-style process.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4 choose-card">
+          <div class="card-pad">
+            <h3>No Long-Term Contracts Required</h3>
+            <p class="story-p">
+              Get practical help when you need it, whether that is a one-time problem, a setup project, or ongoing support.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4 choose-card">
+          <div class="card-pad">
+            <h3>Clear Pricing and Recommendations</h3>
+            <p class="story-p">
+              Straightforward starting prices, plain-English explanations, and practical next steps you can actually use.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="services" class="block">
       <div class="section-head">
         <h2>Services</h2>
@@ -1428,6 +1489,48 @@
       </div>
     </section>
 
+    <section class="block">
+      <div class="section-head">
+        <h2>Recent Work</h2>
+        <p>Real examples of the kinds of practical work we help clients with every day.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card col-4 proof-card">
+          <div class="card-pad">
+            <h3>Network and WiFi Fixes</h3>
+            <ul class="proof-list">
+              <li>Improved slow office and home WiFi performance</li>
+              <li>Resolved dropped connections and weak signal areas</li>
+              <li>Helped reconnect printers, routers, and business devices</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card col-4 proof-card">
+          <div class="card-pad">
+            <h3>Email and Cloud Setup</h3>
+            <ul class="proof-list">
+              <li>Configured business email for small teams</li>
+              <li>Set up Microsoft 365 accounts and permissions</li>
+              <li>Improved access, organization, and day-to-day reliability</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card col-4 proof-card">
+          <div class="card-pad">
+            <h3>Security and Recovery Help</h3>
+            <ul class="proof-list">
+              <li>Removed malware and suspicious software</li>
+              <li>Reviewed backups and recovery readiness</li>
+              <li>Strengthened account security and system protection</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="credentials" class="block">
       <div class="section-head">
         <h2>Trusted Security Professional</h2>
@@ -1532,6 +1635,21 @@
               From computer issues to email setup to business security, website setup, and home service repairs, clients get support that helps them stay productive and protected.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="section-head">
+        <h2>Building Trusted Local Relationships</h2>
+        <p>We are focused on earning long-term trust with real work, clear communication, and dependable results.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-pad">
+          <p class="relationship-note">
+            We are actively working with small businesses and local clients across Central Florida. If you have worked with Bully Cyber Security, we welcome your feedback and reviews. Our goal is to earn trust through practical service, honest communication, and results clients can actually use.
+          </p>
         </div>
       </div>
     </section>
