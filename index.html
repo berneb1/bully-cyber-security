@@ -273,7 +273,7 @@
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 760px;
       margin: 0.8rem auto 0;
       color: #f5fbff;
       font-weight: 700;
@@ -327,7 +327,7 @@
 
     .hero-card {
       margin: 1.5rem auto 0;
-      max-width: 920px;
+      max-width: 1020px;
       background: rgba(255, 255, 255, 0.14);
       border: 1px solid rgba(255, 255, 255, 0.22);
       border-radius: 28px;
@@ -356,6 +356,35 @@
       color: #fff;
       font-weight: 800;
       font-size: 0.92rem;
+    }
+
+    .hero-points {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .hero-point {
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 0.95rem;
+      text-align: left;
+    }
+
+    .hero-point strong {
+      display: block;
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-point span {
+      color: #eef7ff;
+      font-weight: 650;
+      line-height: 1.55;
+      font-size: 0.94rem;
     }
 
     .contact-strip {
@@ -503,6 +532,54 @@
 
     .service-bucket li + li {
       margin-top: 0.3rem;
+    }
+
+    .services-top {
+      margin-bottom: 1rem;
+    }
+
+    .services-mini {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .services-mini .mini-card {
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 18px;
+      padding: 0.9rem;
+      text-align: center;
+    }
+
+    .services-mini .mini-card strong {
+      display: block;
+      color: #ffffff;
+      margin-bottom: 0.2rem;
+      font-size: 1rem;
+    }
+
+    .services-mini .mini-card span {
+      color: #eef7ff;
+      font-weight: 650;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .service-symbol {
+      display: inline-block;
+      margin-bottom: 0.45rem;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .service-bucket h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0;
+      color: #ffffff;
+      font-size: 1.08rem;
     }
 
     .story-wrap {
@@ -963,7 +1040,9 @@
       }
 
       .stat-grid,
-      .pricing-grid {
+      .pricing-grid,
+      .hero-points,
+      .services-mini {
         grid-template-columns: 1fr;
       }
 
@@ -1091,30 +1170,45 @@
   <header class="hero" id="top">
     <img class="hero-logo" src="bcs-logo.png" alt="IT support and cybersecurity services logo" width="92" height="92" decoding="async" loading="lazy" />
 
-    <h1>Simple IT Support &amp; Cybersecurity for Small Businesses</h1>
+    <h1>Fast IT Help &amp; Cybersecurity Support for Small Businesses</h1>
 
     <p>
-      We help small businesses, home offices, and local residents fix technology problems, protect their systems, and keep things running smoothly without the confusion of generic big-box support.
+      Fix computer issues, secure email and Microsoft 365, improve WiFi, protect your data, and get direct expert support without the generic big-box runaround.
     </p>
 
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#contact">Get Help Now</a>
-      <a class="btn btn-ghost" href="#services">View Services</a>
+      <a class="btn btn-primary" href="tel:4079065796">✦ Call for Fast Help</a>
+      <a class="btn btn-ghost" href="#services">▸ View Services</a>
     </div>
 
     <div class="hero-card">
       <div class="hero-chips">
-        <div class="hero-chip">Practical IT support</div>
-        <div class="hero-chip">Cybersecurity guidance</div>
-        <div class="hero-chip">WiFi and email help</div>
-        <div class="hero-chip">Backups and protection</div>
-        <div class="hero-chip">Home and small business support</div>
+        <div class="hero-chip">◆ Small business IT support</div>
+        <div class="hero-chip">◆ Cybersecurity guidance</div>
+        <div class="hero-chip">◆ Email &amp; Microsoft 365 help</div>
+        <div class="hero-chip">◆ WiFi &amp; network fixes</div>
+        <div class="hero-chip">◆ Home &amp; office support</div>
+      </div>
+
+      <div class="hero-points">
+        <div class="hero-point">
+          <strong>✦ Fast Practical Help</strong>
+          <span>Get direct support for slow computers, login issues, WiFi problems, malware, and setup headaches.</span>
+        </div>
+        <div class="hero-point">
+          <strong>✦ Security + IT Expertise</strong>
+          <span>Work with someone who understands both everyday tech problems and higher-level security risk.</span>
+        </div>
+        <div class="hero-point">
+          <strong>✦ Local Central Florida Support</strong>
+          <span>Available for small businesses, home offices, and local clients who need dependable help.</span>
+        </div>
       </div>
     </div>
 
     <div class="contact-strip">
-      <a class="btn btn-primary" href="tel:4079065796">Call for Fast Help</a>
-      <a class="btn btn-ghost" href="mailto:berneb@bullycyber.com">Send Email</a>
+      <a class="btn btn-primary" href="tel:4079065796">☎ Call for Fast Help</a>
+      <a class="btn btn-ghost" href="mailto:berneb@bullycyber.com">✉ Send Email</a>
     </div>
 
     <p class="service-area">
@@ -1211,151 +1305,137 @@
     <section id="services" class="block">
       <div class="section-head">
         <h2>Services</h2>
-        <p>Technology and cybersecurity support designed for small businesses, home offices, and local residents.</p>
+        <p>Clear, practical IT and cybersecurity help designed to be easy to scan and easy to buy.</p>
+      </div>
+
+      <div class="services-top">
+        <div class="services-mini">
+          <div class="mini-card">
+            <div class="service-symbol">⚡</div>
+            <strong>Fast Support</strong>
+            <span>Quick help for urgent tech issues</span>
+          </div>
+          <div class="mini-card">
+            <div class="service-symbol">🛡</div>
+            <strong>Security Focused</strong>
+            <span>Protect systems, accounts, and data</span>
+          </div>
+          <div class="mini-card">
+            <div class="service-symbol">🏢</div>
+            <strong>Small Business Friendly</strong>
+            <span>No enterprise complexity</span>
+          </div>
+          <div class="mini-card">
+            <div class="service-symbol">🏠</div>
+            <strong>Home &amp; Office Help</strong>
+            <span>Support where you actually work</span>
+          </div>
+        </div>
       </div>
 
       <div class="grid">
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Computer Repair</h3>
-            <p class="story-p">
-              Fast support for slow computers, software issues, login problems, and technical errors that interrupt business operations or home use.
-            </p>
+            <h3><span class="service-symbol">💻</span> Computer Repair</h3>
+            <p class="story-p">Fix slow computers, login issues, software problems, crashes, and everyday tech problems that interrupt work.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Home Service Repairs</h3>
-            <p class="story-p">
-              On-site home technology support for computers, printers, WiFi issues, email setup, device troubleshooting, and everyday tech problems.
-            </p>
+            <h3><span class="service-symbol">🦠</span> Virus &amp; Malware Removal</h3>
+            <p class="story-p">Remove malware, suspicious software, pop-ups, and security threats that put your devices and data at risk.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Business Email Setup</h3>
-            <p class="story-p">
-              Professional email setup using platforms like Microsoft 365 and Google Workspace. We configure business email, accounts, and access so teams can work efficiently.
-            </p>
+            <h3><span class="service-symbol">📶</span> WiFi Troubleshooting</h3>
+            <p class="story-p">Fix slow WiFi, dropped connections, weak signal areas, and device connectivity issues at home or work.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>New Computer Setup</h3>
-            <p class="story-p">
-              Setup for new computers including account configuration, software installation, email setup, printer connection, security basics, and getting everything ready to use.
-            </p>
+            <h3><span class="service-symbol">📧</span> Business Email Setup</h3>
+            <p class="story-p">Set up professional email with Microsoft 365 or Google Workspace so your business communicates reliably.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Virus &amp; Malware Removal</h3>
-            <p class="story-p">
-              Help removing viruses, malware, pop-ups, suspicious software, and other threats that slow down your computer or put your information at risk.
-            </p>
+            <h3><span class="service-symbol">☁</span> Microsoft 365 &amp; Cloud Support</h3>
+            <p class="story-p">Get help with user accounts, permissions, email access, file sharing, security settings, and cloud administration.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Website Setup &amp; Basic Business Websites</h3>
-            <p class="story-p">
-              Setup for simple business websites including basic page design, contact forms, business information, and getting your site ready for customers to view and use.
-            </p>
+            <h3><span class="service-symbol">🔐</span> Security Setup</h3>
+            <p class="story-p">Strengthen computers, email, cloud accounts, backups, and business systems with practical protection that makes sense.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>WiFi &amp; Network Setup</h3>
-            <p class="story-p">
-              Setup and support for office or home WiFi, routers, connectivity, printers, and network basics so you stay connected and productive.
-            </p>
+            <h3><span class="service-symbol">🛡</span> Cybersecurity Risk Assessment</h3>
+            <p class="story-p">Review systems, email, backups, cloud services, and business processes to identify risks and next steps.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>WiFi Troubleshooting &amp; Optimization</h3>
-            <p class="story-p">
-              Support for slow WiFi, dropped connections, weak signal areas, printer connection problems, and network issues so your home or business stays connected and running smoothly.
-            </p>
+            <h3><span class="service-symbol">🔒</span> Microsoft 365 Security Hardening</h3>
+            <p class="story-p">Improve account security, MFA, email protection, and admin controls for a stronger Microsoft 365 environment.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Backup &amp; Data Protection</h3>
-            <p class="story-p">
-              Protect your business or home office from data loss, downtime, and ransomware with secure backups, recovery planning, and practical protection for everyday technology.
-            </p>
+            <h3><span class="service-symbol">💾</span> Backup &amp; Data Protection</h3>
+            <p class="story-p">Protect your business from data loss, downtime, and ransomware with practical backup and recovery planning.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Small Business IT Support</h3>
-            <p class="story-p">
-              Practical day-to-day IT support for small businesses that need help with computers, user issues, software problems, connectivity, and keeping systems running smoothly.
-            </p>
+            <h3><span class="service-symbol">🧰</span> Small Business IT Support</h3>
+            <p class="story-p">Ongoing help for computers, user problems, software issues, device setup, and day-to-day technology support.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Security Setup</h3>
-            <p class="story-p">
-              Clear guidance to help secure computers, email, cloud accounts, backups, and business systems without unnecessary complexity or confusing technical language.
-            </p>
+            <h3><span class="service-symbol">🖥</span> New Computer Setup</h3>
+            <p class="story-p">Set up new devices with accounts, email, software, printers, security basics, and everything ready to use.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Business Technology Setup</h3>
-            <p class="story-p">
-              We help businesses properly set up computers, WiFi networks, printers, and business systems so everything works reliably and securely from day one.
-            </p>
+            <h3><span class="service-symbol">🌐</span> Website Setup &amp; Basic Business Websites</h3>
+            <p class="story-p">Launch a clean basic website with contact info, forms, and the essentials your customers need to find and trust you.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Cloud &amp; Microsoft 365 Support</h3>
-            <p class="story-p">
-              Setup and support for Microsoft 365, user accounts, email access, file sharing, permissions, and cloud administration for small business environments.
-            </p>
+            <h3><span class="service-symbol">📡</span> WiFi &amp; Network Setup</h3>
+            <p class="story-p">Set up routers, printers, connectivity, and network basics so your home or office stays productive and connected.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Business Security Checkup</h3>
-            <p class="story-p">
-              We review your computers, email, WiFi, backups, and business systems to identify security issues and practical ways to improve protection.
-            </p>
+            <h3><span class="service-symbol">🏢</span> Business Technology Setup</h3>
+            <p class="story-p">Get computers, WiFi, printers, and core business systems set up correctly from day one.</p>
           </div>
         </div>
 
         <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Cybersecurity Risk Assessment</h3>
-            <p class="story-p">
-              A structured review of your systems, email, cloud services, backups, and business processes to identify risk areas and provide practical recommendations.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4 service-bucket">
-          <div class="card-pad">
-            <h3>Microsoft 365 Security Hardening</h3>
-            <p class="story-p">
-              Improve protection for Microsoft 365 with stronger account security, MFA setup, email protection, admin review, and better configuration for small business use.
-            </p>
+            <h3><span class="service-symbol">🏠</span> Home Service Repairs</h3>
+            <p class="story-p">On-site support for home computers, printers, email setup, device troubleshooting, and everyday technology issues.</p>
           </div>
         </div>
       </div>
